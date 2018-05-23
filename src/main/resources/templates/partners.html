@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Our Partners</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/about/about-accion}">About Accion</a></li>
+                            <li class="breadcrumb-item active">Accion Partners</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <!-- MENUS AND WIDGETS -->
+                        <div class="panel panel-default sidebar-menu with-icons">
+                            <div class="panel-heading">
+                                <h3 class="h4 panel-title">Shareholders</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div th:insert="~{aboutUs :: aboutUsSideMenu}"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div id="accordion" role="tablist" class="mb-5">
+                            <div class="card">
+                                <div id="headingOne" role="tab" class="card-header">
+                                    <h5 class="mb-0"><a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Accion Investment</a></h5>
+                                </div>
+                                <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" class="collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4"><img th:src="@{/img/partners/accioninvestment.png}" alt="" class="img-fluid"></div>
+                                            <div class="col-md-8">
+                                                <p>
+                                                    ACCION Investments in Microfinance (SPC) was established to provide equity and quasi-equity financing to microfinance institutions worldwide. Based in Boston, it is the investment arm of ACCION International. ACCION International has been in the microfinance for over 40 years and partners with over 30 microfinance organizations throughout Latin America, the Caribbean, Asia and Africa, as well as serving U.S. micro-entrepreneurs through the U.S.
+                                                </p>
+                                                <p>
+                                                    ACCION Network. Founded in 1961, ACCION aims to empower the poor through knowledge and tools to improve their lives. What began as a grassroots community development initiative in 22 shantytowns in Venezuela, is today one of the premier microfinance organizations in the world with a network of lending partners across Latin America, Africa, Asia and the United States.
+                                                </p>
+                                                <p>
+                                                    ACCION has built a tradition of developing innovative solutions to poverty.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div id="headingTwo" role="tab" class="card-header">
+                                    <h5 class="mb-0"><a data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">Citi Bank</a></h5>
+                                </div>
+                                <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4"><img th:src="@{/img/partners/citi.png}" alt="" class="img-fluid"></div>
+                                            <div class="col-md-8">
+                                                <p>
+                                                    Citibank began operations in Nigeria in 1984. The bank, formerly operating under the name Nigeria International Bank Limited was renamed Citibank Nigeria Limited (Citi Nigeria) in 2008 to align with Citi's global brand and identity. The bank has a strategic business focus in Nigeria specializing mainly in Corporate Banking and servicing mostly corporate clients.
+                                                </p>
+                                                <p>
+                                                    Citi Nigeria offers a broad range of services, including global transaction services, sales and trading, corporate finance and investment banking services to corporate and commercial customers, financial institutions (including other banks) and public sector organizations. In August 2008, Citi launched its Direct Custody and Clearing Services in Nigeria, the 53rd market on its proprietary network - the largest in the world.
+                                                </p>
+                                                <p>
+                                                    The DCC business will facilitate business transactions for clients and investors looking to do business in Nigeria. With almost 300 employees and 13 branches across the country, Citi Nigeria is known for its innovation as it has successfully leveraged its global network and extensive knowledge base to offer its Nigerian clients innovative products and services.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div id="headingThree" role="tab" class="card-header">
+                                    <h5 class="mb-0"><a data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">Ecobank</a></h5>
+                                </div>
+                                <div id="collapseThree" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4"><img th:src="@{/img/partners/ecobank.png}" alt="" class="img-fluid"></div>
+                                            <div class="col-md-8">
+                                                <p>
+                                                    Ecobank is the leading independent regional banking group in West and Central Africa serving wholesale and retail customers. It has a network covering 18 countries namely: Benin, Burkina Faso, Cameroon, Cape Verde, Central Africa, Côte d’Ivoire, Ghana, Guinea, Guinea Bissau, Liberia, Mali, Niger, Nigeria, Sao Tome, Senegal, Sierra Leone, Chad and Togo, with plans to establish presence in East and Southern Africa.
+                                                </p>
+                                                <p>
+                                                    The Group has a network of over 320 branches and offices established in the last 19 years. Ecobank Transnational Incorporated (ETI) the parent company of the Ecobank Group plays a central role in the definition and implementation of common policies and standards on the basis of a “one bank” concept across the group’s network.
+                                                </p>
+                                                <p>
+                                                    Ecobank recently merged with Oceanic Bank, the resulting Bank is known as Ecobank Nigeria.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div id="headingFour" role="tab" class="card-header">
+                                    <h5 class="mb-0"><a data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">International Finance Corporation</a></h5>
+                                </div>
+                                <div id="collapseFour" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4"><img th:src="@{/img/partners/ifc.png}" alt="" class="img-fluid"></div>
+                                            <div class="col-md-8">
+                                                <p>
+                                                    The International Finance Corporation is the private sector arm of the World Bank Group. IFC provides loans, equity, structured finance and risk management products, and advisory services to build the private sector in developing countries.
+                                                </p>
+                                                <p>
+                                                    IFC invests in enterprises majority-owned by the private sector throughout most developing countries in the world including: Sub-Saharan Africa, East Asia & the Pacific, South Asia, Europe & Central Asia, Latin America & the Caribbean, Middle East & North Africa.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div id="headingFive" role="tab" class="card-header">
+                                    <h5 class="mb-0"><a data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">Zenith</a></h5>
+                                </div>
+                                <div id="collapseFive" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4"><img th:src="@{/img/partners/zenith.png}" alt="" class="img-fluid"></div>
+                                            <div class="col-md-8">
+                                                <p>
+                                                    Zenith Bank Plc. was established in May 1990, and commenced operations in July of the same year as a commercial bank. The Bank became a public limited company on June 17, 2004 and was listed on the Nigerian Stock Exchange (NSE) on October 21, 2004 following a highly successful Initial Public Offering (IPO). 
+                                                </p>
+                                                <p>
+                                                    Nigerian institutions and individuals numbering over a million currently own the shares of the bank. Headquartered in Lagos, Nigeria, Zenith Bank Plc has over 500 branches and business offices in prime commercial centres in all states of the federation and the Federal Capital Territory (FCT). Within the first decade of operation, the Bank made its mark in profitability and all other performance indices, and has maintained this prime position till date.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

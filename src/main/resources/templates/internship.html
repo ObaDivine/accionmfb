@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Internship In Accion</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/career/career-at-accion}">Career</a></li>
+                            <li class="breadcrumb-item active">Internship</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <section class="bar">
+                    <div class="row portfolio-project">
+                        <div class="col-sm-8">
+                            <div class="project owl-carousel mb-4">
+                                <div class="item"><img th:src="@{/img/career/1.jpg}" alt="" class="img-fluid"></div>
+                                <div class="item"><img th:src="@{/img/career/2.jpg}" alt="" class="img-fluid"></div>
+                                <div class="item"><img th:src="@{/img/career/3.jpg}" alt="" class="img-fluid"></div>
+                                <div class="item"><img th:src="@{/img/career/4.jpg}" alt="" class="img-fluid"></div>
+                                <div class="item"><img th:src="@{/img/career/5.jpg}" alt="" class="img-fluid"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="project-more">
+                                <h4>About Accion HR</h4>
+                                <p>At Accion Microfinance Bank, we believe people are not just our best assets: the right people are. Our people are the success of the bank - today and in the future.
+                                    Accion MfB employees are talented, dedicated, hardworking, committed and experienced people hired for their skills and knowledge. </p>
+                                <h4>Job Segments</h4>
+                                <p>Banking & Finance<br/>
+                                    Accounting<br/>
+                                    Information Technology<br/>
+                                    Risk Management<br/>
+                                    Audit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <section class="bar background-pentagon no-mb text-md-center">
+                                <div class="container">
+                                    <div class="heading text-center">
+                                        <h5>Interns Testimonials</h5>
+                                    </div>
+                                    <p class="lead">We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us.</p>
+                                    <!-- Carousel Start-->
+                                    <ul class="owl-carousel testimonials list-unstyled equal-height">
+                                        <li class="item">
+                                            <div class="testimonial d-flex flex-wrap">
+                                                <div class="text">
+                                                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+                                                </div>
+                                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                                    <div class="testimonial-info d-flex">
+                                                        <div class="title">
+                                                            <h5>John McIntyre</h5>
+                                                            <p>CEO, TransTech</p>
+                                                        </div>
+                                                        <div class="avatar"><img alt="" src="img/person-1.jpg" class="img-fluid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="testimonial d-flex flex-wrap">
+                                                <div class="text">
+                                                    <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+                                                </div>
+                                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                                    <div class="testimonial-info d-flex">
+                                                        <div class="title">
+                                                            <h5>John McIntyre</h5>
+                                                            <p>CEO, TransTech</p>
+                                                        </div>
+                                                        <div class="avatar"><img alt="" src="img/person-2.jpg" class="img-fluid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="testimonial d-flex flex-wrap">
+                                                <div class="text">
+                                                    <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+                                                    <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+                                                </div>
+                                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                                    <div class="testimonial-info d-flex">
+                                                        <div class="title">
+                                                            <h5>John McIntyre</h5>
+                                                            <p>CEO, TransTech</p>
+                                                        </div>
+                                                        <div class="avatar"><img alt="" src="img/person-3.png" class="img-fluid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="testimonial d-flex flex-wrap">
+                                                <div class="text">
+                                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+                                                </div>
+                                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                                    <div class="testimonial-info d-flex">
+                                                        <div class="title">
+                                                            <h5>John McIntyre</h5>
+                                                            <p>CEO, TransTech</p>
+                                                        </div>
+                                                        <div class="avatar"><img alt="" src="img/person-4.jpg" class="img-fluid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- Carousel End-->
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-sm-12">
+                            <section class="bg-white bar">
+                                <div class="container">
+                                    <div class="heading text-center">
+                                        <h5>Why Intern with Accion</h5>
+                                        <p class="lead"> 
+                                            Accion Microfinance Bank offers unique and exciting internship programmes to student of accredited universities.
+                                        </p>
+                                    </div>
+                                    <div class="heading text-center">
+                                        <h5>Type of Internship</h5>
+                                    </div>
+                                    <div style="background-color:#ffffee; border:2px solid #ffffee; border-radius:3px; text-align: left;">
+                                        <p> 
+                                            Accion Microfinance Bank offers offers internship to different categories of interns.
+                                        </p>
+                                        <h5>Management Internship Opportunities</h5>  
+                                        <p>
+                                            Students of Finance and Accounts, Accounting, Business Management can apply for internship position in this category.
+                                        </p>
+                                        <h5>ICT Internship Opportunities</h5>  
+                                        <p>
+                                            Students of Finance and Accounts, Accounting, Business Management can apply for internship position in this category.
+                                        </p>
+                                    </div>
+                                    <div class="heading text-center">
+                                        <h5>How You Can Apply</h5>
+                                        <p class="lead"> 
+                                            Accion Microfinance Bank offers offers internship to different categories of interns.
+                                        </p>
+                                        <a class="btn btn-secondary" data-toggle="modal" data-target="#internship-form-modal">Apply Here</a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="modal fade" id="internship-form-modal">
+            <div class="modal-dialog" role = "document">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Accion Internship</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <form th:action="@{/career/apply-for-internship}" th:object="${internshipForm}" th:method="post">
+                                <fieldset class="form-group row">
+                                    <legend class="col-form-legend col-sm-10">Bio Details</legend>
+                                    <div class="col-sm-10 custom-control">
+                                        <input id="surname_modal" th:field="*{surname}" type="text" placeholder="surname" class="form-control form-control-sm">
+                                        <p th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">Surname required</p>
+                                    </div>
+                                    <div class="col-sm-10 custom-control">
+                                        <input id="othername_modal" th:field="*{otherNames}" type="text" placeholder="other names" class="form-control form-control-sm">
+                                        <label th:if="${#fields.hasErrors('otherNames')}" th:errors="*{otherNames}" class="col-md-2">First Name Error</label>
+                                    </div>
+                                    <div class="col-sm-10 custom-control">
+                                        <input id="dob_modal" th:field="*{doB}" type="date" placeholder="date of birth" class="form-control form-control-sm">
+                                        <label th:if="${#fields.hasErrors('doB')}" th:errors="*{doB}" class="col-md-2">Date of Birth Error</label>
+                                    </div>
+                                    <div class="col-sm-10 custom-control">
+                                        <select th:field="*{gender}">
+                                            <option th:each="sex : ${genders}" 
+                                                    th:value="${sex}" 
+                                                    th:text="${sex}">
+                                            </option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form-group row">
+                                    <legend class="col-form-legend col-sm-12">Contact Details</legend>
+                                    <div class="col-sm-10 custom-control">
+                                        <input id="contactAddress_modal" th:field="*{contactAddress}" type="text" placeholder="contact address" class="form-control form-control-sm">
+                                        <label th:if="${#fields.hasErrors('contactAddress')}" th:errors="*{contactAddress}" class="col-md-2">Contact Address Error</label>
+                                    </div>
+                                    <div class="col-sm-10 custom-control">
+                                        <input id="phone_modal" th:field="*{phoneNumber}" type="text" placeholder="phone number" class="form-control form-control-sm">
+                                        <label th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}" class="col-md-2">Phone Number Error</label>
+                                    </div>
+                                    <div class="col-sm-10 custom-control">
+                                        <input id="email_modal" th:field="*{email}" type="text" placeholder="email" class="form-control form-control-sm">
+                                        <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="col-md-2">Email required</label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form-group row">
+                                    <legend class="col-form-legend col-sm-12">Residency Details</legend>
+                                    <div class="col-sm-10 custom-control">
+                                        <input id="nationality_modal" th:field="*{nationality}" type="text" placeholder="nationality" class="form-control form-control-sm">
+                                        <label th:if="${#fields.hasErrors('nationality')}" th:errors="*{nationality}" class="col-md-2">Nationality required</label>
+                                    </div>
+                                    <div class="col-sm-10 custom-control">
+                                        <input id="countryOfResidence_modal" th:field="*{countryOfResidence}" type="text" placeholder="country of residence" class="form-control form-control-sm">
+                                        <label th:if="${#fields.hasErrors('countryOfResidence')}" th:errors="*{countryOfResidence}" class="col-md-2">Name Error</label>
+                                    </div>
+                                    <div class="col-sm-10 custom-control">
+                                        <select th:field="*{stateOfResidence}">
+                                            <option th:each="state : ${statesInNigeria}" 
+                                                    th:value="${state}" 
+                                                    th:text="${state}">
+                                            </option>
+                                        </select>
+                                        <label th:if="${#fields.hasErrors('stateOfResidence')}" th:errors="*{stateOfResidence}" class="col-md-2">Name Error</label>
+                                    </div>
+                                    <div class="col-sm-10 custom-control">
+                                        <select th:field="*{stateOfOrigin}">
+                                            <option th:each="state : ${statesInNigeria}" 
+                                                    th:value="${state}" 
+                                                    th:text="${state}">
+                                            </option>
+                                        </select>
+                                        <label th:if="${#fields.hasErrors('stateOfOrigin')}" th:errors="*{stateOfOrigin}" class="col-md-2">Name Error</label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form-group row">
+                                    <legend class="col-form-legend col-sm-12">Course Details</legend>
+                                    <div class="col-sm-10 custom-control">
+                                        <input id="school_modal" th:field="*{school}" type="text" placeholder="name of school" class="form-control form-control-sm">
+                                        <label th:if="${#fields.hasErrors('school')}" th:errors="*{school}" class="col-md-2">School required</label>
+                                    </div>
+                                    <div class="col-sm-10 custom-control">
+                                        <input id="course_modal" th:field="*{courseOfStudy}" type="text" placeholder="course of study" class="form-control form-control-sm">
+                                        <label th:if="${#fields.hasErrors('courseOfStudy')}" th:errors="*{courseOfStudy}" class="col-md-2">Course required</label>
+                                    </div>
+                                    <div class="col-sm-10 custom-control">
+                                        <input id="yearOfStudy_modal" th:field="*{yearOfStudy}" type="number" placeholder="year of study" class="form-control form-control-sm">
+                                        <label th:if="${#fields.hasErrors('yearOfStudy')}" th:errors="*{yearOfStudy}" class="col-md-2">Year of Study error</label>
+                                    </div>
+
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success btn-template-outlined" data-dismiss="modal">Submit</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

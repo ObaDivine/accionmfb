@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Terms of Use</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/about/about-accion}">About Accion</a></li>
+                            <li class="breadcrumb-item active">Terms of Use</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <!-- MENUS AND WIDGETS -->
+                        <div class="panel panel-default sidebar-menu with-icons">
+                            <div class="panel-heading">
+                                <h3 class="h4 panel-title">Terms of Use</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div th:insert="~{aboutUs :: aboutUsSideMenu}"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="card">
+                            <div class="card-header green-header">
+                                Terms of Use
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-center">Access to this website and the use of information on it is subject to these Terms and Conditions of Use. Please carefully read these Terms and Conditions of Use. By proceeding further, you will be deemed to have accepted them. These Terms and Conditions of Use shall also apply, subject to alteration as necessary, to attempted access of the website and attempted use of information on it.
+                                    <br/><br/>
+                                    Modifications
+                                    Accion Microfinance Bank Limited may at any time make modifications, changes, and alterations to the contents of this website, including these Terms of Use, without prior notice. Users are responsible for regularly reviewing these Terms of Use. Your continued use of this website following any modifications, changes or alterations shall constitute your acceptance of each such modification, change or alteration.
+                                    <br/><br/>
+                                    Disclaimer as to accuracy of information
+                                    We do not warrant the accuracy, adequacy or completeness of the information and expressly disclaims liability for errors or omissions in the information. We do not give any warranty whatsoever whether implied, express or statutory on title, merchantability, fitness for a particular purpose and freedom from computer virus in relation to the information and materials on this web site.
+                                    In no event will Accion Microfinance Bank Limited Ltd be liable for any damages, including without limitation direct or indirect, special, incidental or consequential damages, losses, costs or expenses arising in connection with this site or use thereof or inability to use by any party, on in connection with any failure of performance, error, omission, interruption, defect, delay in operation or transmission, computer virus or line or system failure even if Accion Microfinance Bank Limited is advised of the possibility of such damages, losses, costs or expenses. We do not make any representations or warranties as to the accuracy of the information contained on this website.
+                                    <br/><br/>
+                                    Third Party Links
+                                    Clicking on certain links within this website will take you into other websites or material not under the control of Accion Microfinance Bank Limited. Accion Microfinance Bank Limited is not responsible for the contents of any such link or any link contained within a link, or any changes or updates to such links. Content owned by third parties is protected by copyrights of such third parties and is subject to these Terms of Use and such other conditions as may be established by third party providers of content from time to time. Accion Microfinance Bank Limited is not responsible for web casting, the placement of "cookies" by, or any other form of transmission received from any linked site. The inclusion of any link does not imply endorsement by Accion Microfinance Bank Limited of the link.
+                                    No third party is permitted to create a link from another website to this website without our prior written consent.
+                                    <br/><br/>
+                                    Indemnification
+                                    The user agrees to indemnify and hold Accion Microfinance Bank Limited harmless from and against any and all claims, losses, liability, cost, and expenses, including, but not limited to attorney’s fees, arising from the user’s violation of these Terms of Use or any third party’s rights, including, but not limited to, copyrights, proprietary and privacy rights. This indemnity and obligation will survive the termination of these Terms of Use.
+                                    <br/><br/>
+                                    Copyrights and Other Intellectual Property
+                                    Except where otherwise expressly noted or as noted below, all contents of this website, including the graphics, icons and overall appearance of the website, are the sole and exclusive property of Accion Microfinance Bank Limited. The posting of the contents of this website neither constitutes a waiver of any of Accion Microfinance Bank Limited’s proprietary rights or any other party's proprietary rights, including but not limited to, copyrights, trademarks, service marks, patents and other intellectual property, nor a transfer by implication, estoppels or otherwise of any such rights or of any license to the website user or to any third party. Contents of this website are protected by the applicable Intellectual Property Law. You agree not to delete any copyright, trademark or similar notice from any contents that you obtain from the website. You may download or copy the content only for your own personal non commercial use, provided that you maintain all copyright and other notices contained in such content. The display of trademarks within this website does not grant you a license of any kind. Any downloading of material contained in the site, or of any site linked to the site, may be a violation of the applicable Intellectual Property Law
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

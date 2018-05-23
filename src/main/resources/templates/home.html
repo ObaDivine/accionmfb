@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title th:text="#{app.title}">Accion</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="all,follow">
+        <link th:href="@{/img/favicon.png}" href="/img/favicon.png" rel="icon">
+        <link rel="stylesheet" th:href="@{/css/animate.css}">
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" th:href="@{/css/bootstrap-select.min.css}">
+        <link rel="stylesheet" th:href="@{/css/owl.carousel.css}">
+        <link rel="stylesheet" th:href="@{/css/owl.theme.default.css}">
+        <link rel="stylesheet" th:href="@{/css/style.default.css}" id="theme-stylesheet">
+        <link rel="stylesheet" th:href="@{/css/datatables.min.css}">
+        <link rel="shortcut icon" th:href="@{img/favicon.ico}" type="image/x-icon">
+        <link rel="apple-touch-icon" th:href="@{/img/apple-touch-icon.png}">
+    </head>
+    <body>
+        <div id="all">
+            <!-- Top bar-->
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-md-4 d-md-block d-none">
+                            <div>
+                                <span class="fa fa-mobile" style="vertical-align: middle; font-size:18px;"></span>
+                                <span style="font-size: 15px;">234 01-2719325-6</span>&nbsp&nbsp
+                                <span class="fa fa-envelope" style="vertical-align: middle; font-size:18px;"></span>
+                                <span style="font-size: 15px;">info@accionmfb.com</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="icon-bar-menu">
+                                <a th:href="@{/products/brighta-accounts}"title="Accion Accounts" data-toggle="popover" data-trigger="hover" data-content="Click anywhere in the document to close this popover" ><i class="fa fa-briefcase"></i></a> 
+                                <a th:href="@{/products/brighta-loans}" title="Accion Loans" data-toggle="popover" data-trigger="hover" data-content="Click anywhere in the document to close this popover"><i class="fa fa-money"></i></a> 
+                                <a th:href="@{/products/branch-network}" title="Branch Network" data-toggle="popover" data-trigger="hover" data-content="Click anywhere in the document to close this popover"><i class="fa fa-compass"></i></a> 
+                                <a th:href="@{/products/brighta-accounts}" title="Mobile Banking" data-toggle="popover" data-trigger="hover" data-content="Click anywhere in the document to close this popover"><i class="fa fa-mobile"></i></a>
+                                <a th:href="@{/agent-banking/}" title="Accion Agents" data-toggle="popover" data-trigger="hover" data-content="Click anywhere in the document to close this popover"><i class="fa fa-users"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <script>
+                                (function () {
+                                    var cx = '018198361101943829185:5dmwy7faxt0';
+                                    var gcse = document.createElement('script');
+                                    gcse.type = 'text/javascript';
+                                    gcse.async = true;
+                                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                                    var s = document.getElementsByTagName('script')[0];
+                                    s.parentNode.insertBefore(gcse, s);
+                                })();
+                            </script>
+                            <gcse:searchbox-only></gcse:searcbox-only>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Top bar end-->
+
+            <!-- Navbar Start-->
+            <header class="nav-holder make-sticky" style="border-bottom: 1px solid #a8a800;">
+                <div id="navbar" role="navigation" class="navbar navbar-expand-sm">
+                    <div class="container">
+                        <a th:text="#{app.fulltitle}" th:href="@{/}" class="home text-uppercase" style="font-weight: bold; text-decoration: none;">
+                            <img th:src="@{/img/new_logo.png}" alt="Accion MFB logo" class="d-none d-md-inline-block">
+                            <span class="sr-only">Accion MFB</span>
+                        </a>
+                        <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined">
+                            <span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i>
+                        </button>
+                        <div id="navigation" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item dropdown">
+                                    <a th:href="@{/}" style="color:#ea7600;">Home</a>
+                                </li>
+                                <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle" style="color:#ea7600;">Who We Are<b class="caret"></b></a>
+                                    <ul class="dropdown-menu megamenu">
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-lg-3"><img th:src="@{~/img/about/logo.png}" alt="" class="img-fluid d-none d-lg-block"></div>
+                                                <div class="col-lg-3 col-md-6">
+                                                    <h5>About Accion</h5>
+                                                    <ul class="list-unstyled mb-3">
+                                                        <li class="dropdown-item"><a th:href="@{/about/about-accion}" class="nav-link">Accion Values</a></li>
+                                                        <li class="dropdown-item"><a th:href="@{/about/board-of-directors}" class="nav-link">Board of Directors</a></li>
+                                                        <li class="dropdown-item"><a th:href="@{/about/management-team}" class="nav-link">Management Team</a></li>
+                                                        <li class="dropdown-item"><a th:href="@{/about/accion-partners}" class="nav-link">Partners</a></li>
+                                                        <li class="dropdown-item"><a th:href="@{/about/accion-financial}" class="nav-link">Accion Financial</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6">
+                                                    <h5>News And Events</h5>
+                                                    <ul class="list-unstyled mb-3">
+                                                        <li class="nav-item"><a th:href="@{/media/news-and-events}" class="nav-link">Accion News</a></li>
+                                                        <li class="nav-item"><a th:href="@{/media/accion-events}" class="nav-link">Events</a></li>
+                                                        <li class="nav-item"><a th:href="@{/media/press-release}" class="nav-link">Press Release</a></li>
+                                                        <li class="nav-item"><a th:href="@{/media/press-release}" class="nav-link">Accion Milestone</a></li>
+                                                        <li class="nav-item"><a th:href="@{/media/corporate-responsibility}" class="nav-link">Corporate Responsibility</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle" style="color:#ea7600;">Products<b class="caret"></b></a>
+                                    <ul class="dropdown-menu megamenu">
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-lg-3"><img th:src="@{~/img/about/about_5.png}" alt="" class="img-fluid d-none d-lg-block"></div>
+                                                <div class="col-lg-3 col-md-6">
+                                                    <h5>Personal</h5>
+                                                    <ul class="list-unstyled mb-3">
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-purse}" class="nav-link">Brighta Purse</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-future}" class="nav-link">Brighta Future</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-investor}" class="nav-link">Brighta Investor</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-together}" class="nav-link">Brighta Togeda</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-plus}" class="nav-link">Brighta Plus</a></li>
+                                                    </ul>
+                                                    <h5>Individual Loans</h5>
+                                                    <ul class="list-unstyled mb-3">
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-myown-loan}" class="nav-link">My Own</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-myown-loan-plus}" class="nav-link">My Own Plus</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-myown-asset-loan}" class="nav-link">My Own Asset</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-plwd}" class="nav-link">People Living With Disability</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-myown-home-loan}" class="nav-link">My Own Home</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-myloan}" class="nav-link">My Loan</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-myagent}" class="nav-link">My Agent</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6">
+                                                    <h5>SME</h5>
+                                                    <ul class="list-unstyled mb-3">
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-xtra}" class="nav-link">Brighta Xtra</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/save-brighta}" class="nav-link">Save Brighta</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-socio-investor}" class="nav-link">Brighta Socio-Investor</a></li>
+                                                    </ul>
+                                                    <h5>SME Loans</h5>
+                                                    <ul class="list-unstyled mb-3">
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-sme-education}" class="nav-link">SME Education</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-sme-capital}" class="nav-link">SME Capital</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-sme-solar}" class="nav-link">Brighta Solar</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6">
+                                                    <h5>Corporate Loans</h5>
+                                                    <ul class="list-unstyled mb-3">
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-paygo}" class="nav-link">PayGo</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-school-plus}" class="nav-link">My School Plus</a></li>
+                                                        <li class="nav-item"><a th:href="@{/products/brighta-school-xtra}" class="nav-link">My School Extra</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle" style="color:#ea7600;">Services <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a th:href="@{/channels/internet-banking}" class="nav-link">Internet Banking</a></li>
+                                        <li class="dropdown-item"><a th:href="@{/channels/mobile-banking}" class="nav-link">Mobile Banking</a></li>
+                                        <li class="dropdown-item"><a th:href="@{/channels/accion-ussd}" class="nav-link">USSD Transaction</a></li>
+                                        <li class="dropdown-item"><a th:href="@{/channels/agent-banking/}" class="nav-link">Agent Banking</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle" style="color:#ea7600;">Career <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a th:href="@{/career/career-at-accion}" class="nav-link">Life At Accion</a></li>
+                                        <li class="dropdown-item"><a th:href="@{/career/internship}" class="nav-link">Internship</a></li>
+                                        <li class="dropdown-item"><a th:href="@{/career/featured-positions}" class="nav-link">Hiring Now</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle" style="color:#ea7600;">Contact Us <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a th:href="@{/contact/contact-us/}" class="nav-link">Connect To Us</a></li>
+                                        <li class="dropdown-item"><a th:href="@{/contact/branch-network}" class="nav-link">Branch Network</a></li>
+                                        <li class="dropdown-item"><a th:href="@{/contact/atm-network}" class="nav-link">ATM Location</a></li>
+                                        <li class="dropdown-item"><a th:href="@{/contact/frequently-asked-questions}" class="nav-link">FAQ</a></li>
+                                        <li class="dropdown-item"><a th:href="@{/contact/feedback}" class="nav-link">Feedback</a></li>
+                                        <li class="dropdown-item"><a th:href="@{/contact/whistle-blowing}" class="nav-link">Whistle Blowing</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Navbar End-->
+
+            <!-- Carousel Start-->
+            <section style="background-size: cover; background-color:#a8a800;">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li data-target="#demo" data-slide-to="3"></li>
+                        <li data-target="#demo" data-slide-to="4"></li>
+                        <li data-target="#demo" data-slide-to="5"></li>
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img th:src="@{/img/carousel/1.png}">
+                            <a th:href="@{/products/brighta-loans/}" class="btn btn-primary btn-lg green-header border-secondary" style="border-radius:4px;position: absolute; left:30%; top:55%;">Apply for Loan</a>
+                        </div>
+                        <div class="carousel-item">
+                            <img th:src="@{/img/carousel/2.png}" alt="" class="img-fluid">
+                            <a th:href="@{/contact/branch-network}" class="btn btn-primary btn-lg green-header border-secondary" style="border-radius:4px; position: absolute; left:5%; top:55%;">Branch Network</a>
+                        </div>
+                        <div class="carousel-item">
+                            <img th:src="@{/img/carousel/3.png}" alt="" class="img-fluid">
+                            <a th:href="@{/products/brighta-accounts}" class="btn btn-primary btn-lg green-header border-secondary" style="border-radius:4px; position: absolute; left:34%; top:84.5%;">Open Account</a>
+                        </div>
+                        <div class="carousel-item">
+                            <img th:src="@{/img/carousel/4.png}" alt="" class="img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img th:src="@{/img/carousel/5.png}" alt="" class="img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img th:src="@{/img/carousel/6.png}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </section><!-- Carousel End-->
+
+            <section class="bar background-pentagon no-mb text-md-center"  style="padding-top:15px;">
+                <div class="container">
+                    <div class="heading text-center">
+                        <h2 th:text="#{app.fulltitle}" style="color:#f57921"></h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card text-center wow fadeInUp h-100" >
+                                <div class="card-header green-header">
+                                    <img class="card-img-top" th:src="@{/img/about/about_4.png}" alt="About Accion">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">About Accion</h5>
+                                    <p th:text="#{accion.about}" class="card-text"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card text-center wow fadeInUp h-100" data-wow-delay="0.6s">
+                                <div class="card-header green-header">
+                                    <img class="card-img-top" th:src="@{/img/about/mission.png}" alt="Accion Mission">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Mission</h5>
+                                    <p th:text="#{accion.mission}" class="card-text"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card text-center wow fadeInUp h-100" data-wow-delay="1.2s">
+                                <div class="card-header green-header">
+                                    <img class="card-img-top" th:src="@{/img/about/vision.png}" alt="Accion Vision">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Vision</h5>
+                                    <p th:text="#{accion.vision}" class="card-text"><label>Accion</label></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card text-center wow fadeInUp h-100" data-wow-delay="1.8s">
+                                <div class="card-header green-header">
+                                    <img class="card-img-top" th:src="@{/img/about/value.png}" alt="Accion Core Values">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Core Values</h5>
+                                    <p th:text="#{accion.corevalues}"></p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bar bg-white">
+                <div class="container">
+                    <div class="heading text-center">
+                        <h2>Our Partners</h2>
+                    </div>
+                    <ul class="list-unstyled owl-carousel customers no-mb">
+                        <li><img th:src="@{/img/partners/accion_home.png}" alt="" class="img-fluid"></li>
+                        <li><img th:src="@{/img/partners/citi_home.png}" alt="" class="img-fluid"></li>
+                        <li><img th:src="@{/img/partners/ifc_home.jpg}" alt="" class="img-fluid"></li>
+                        <li><img th:src="@{/img/partners/ecobank_home.jpg}" alt="" class="img-fluid"></li>
+                        <li><img th:src="@{/img/partners/zenith_home.jpg}" alt="" class="img-fluid"></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bar background-pentagon no-mb text-md-center">
+                <div class="container">
+                    <div class="heading text-center">
+                        <h2>Testimonials</h2>
+                    </div>
+                    <p th:text="#{testimonial.heading}" class="lead"></p>
+                    <!-- Carousel Start-->
+                    <ul class="owl-carousel testimonials list-unstyled equal-height">
+                        <li class="item wow slideInRight">
+                            <div class="testimonial d-flex flex-wrap">
+                                <div class="text">
+                                    <p>
+                                        Accion Microfinance Bank’s support has been instrumental to my business growth. With their support, I have been able to build a second shop and put a child through the University.                                        
+                                    </p>
+                                    <p style="color:#ea7600;">Customer at our Ladipo Branch since 2007</p>
+                                </div>
+                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                    <div class="testimonial-info d-flex">
+                                        <div class="title">
+                                            <h5>Sogbolu, Hakeem Olaku</h5>
+                                            <p>Dealer in Doors, Keys & Building Materials</p>
+                                        </div>
+                                        <div class="avatar"><img alt="" th:src="@{/img/testimonial/testimonial_1.jpg}" class="img-fluid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item wow slideInRight">
+                            <div class="testimonial d-flex flex-wrap">
+                                <div class="text">
+                                    <p>
+                                        I thank God and I appreciate Accion MfB’s support to grow my business. I started this business modestly years ago, and it has grown to be a huge success. My children are graduates today, all with the support I have received from Accion MfB.
+                                    </p>
+                                    <p style="color:#ea7600;">Customer at our Bariga Branch since 2007.</p>
+                                </div>
+                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                    <div class="testimonial-info d-flex">
+                                        <div class="title">
+                                            <h5>Odukanmi, Aishat Anike</h5>
+                                            <p>Dealer in fabrics and other tailoring materials</p>
+                                        </div>
+                                        <div class="avatar"><img alt="" th:src="@{/img/testimonial/testimonial_2.jpg}" class="img-fluid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item wow slideInRight">
+                            <div class="testimonial d-flex flex-wrap">
+                                <div class="text">
+                                    <p>
+                                        I thank God for the success of my business and I appreciate the support from Accion MfB. I have moved from being a dealer to an importer in leather goods, moved from a room to a flat, even moved from being a bachelor to a married man. All with the support of Accion MfB
+                                    </p>
+                                    <p style="color:#ea7600;">Customer at our Oke Arin Branch since 2007.</p>
+                                </div>
+                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                    <div class="testimonial-info d-flex">
+                                        <div class="title">
+                                            <h5>Igwegbe, Chukwuma Vincent</h5>
+                                            <p>Dealer in Leather, Bags and Shoe</p>
+                                        </div>
+                                        <div class="avatar"><img alt="" th:src="@{/img/testimonial/testimonial_3.jpg}" class="img-fluid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item wow slideInRight">
+                            <div class="testimonial d-flex flex-wrap">
+                                <div class="text">
+                                    <p>
+                                        Accion MfB support has been very instrumental to my business growth. When I started my business, my shop was very small, but with Accion MfB’s support, I have been able to grow my business and see my children through to getting quality education. 
+                                    </p>
+                                    <p style="color:#ea7600;">Customer at our Oke Arin Branch since 2007.</p>
+                                </div>
+                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                    <div class="testimonial-info d-flex">
+                                        <div class="title">
+                                            <h5>Ogunyemi, Temitope Oluwakemi</h5>
+                                            <p>Dealer in Furniture Making Materials</p>
+                                        </div>
+                                        <div class="avatar"><img alt="" src="img/testimonial-4.jpg" class="img-fluid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item wow slideInRight">
+                            <div class="testimonial d-flex flex-wrap">
+                                <div class="text">
+                                    <p>
+                                        ‘Over  the years Accion MfB has supported my business, giving me access to loan to grow my business. I appreciate the help they have given me and others who have had the need to build their businesses.
+                                    </p>
+                                    <p style="color:#ea7600;">Customer at our Oshodi Branch since 2007.</p>
+                                </div>
+                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                    <div class="testimonial-info d-flex">
+                                        <div class="title">
+                                            <h5>Onwu Ernest Ndubuisi</h5>
+                                            <p>Dealer in Footware</p>
+                                        </div>
+                                        <div class="avatar"><img alt="" src="img/testimonial-5.jpg" class="img-fluid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item wow slideInRight">
+                            <div class="testimonial d-flex flex-wrap">
+                                <div class="text">
+                                    <p>
+                                        Accion MfB has helped my progress in business. With their support, my shop is always filled with goods. My children are all educated with my last child in University now. I appreciate the help Accion has given me
+                                    </p>
+                                    <p style="color:#ea7600;">Customer at our Ladipo Branch since 2008.</p>
+                                </div>
+                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                    <div class="testimonial-info d-flex">
+                                        <div class="title">
+                                            <h5>Ajibola, Rahman Babatunde </h5>
+                                            <p>Dealer in Building Materials</p>
+                                        </div>
+                                        <div class="avatar"><img alt="" src="img/testimonial-5.jpg" class="img-fluid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item wow slideInRight">
+                            <div class="testimonial d-flex flex-wrap">
+                                <div class="text">
+                                    <p>
+                                        With the support of Accion Microfinance Bank, my business has grown to the level where I have been able to support my family to see my children through University and go on Pilgrimage.
+                                    </p>
+                                    <p style="color:#ea7600;">Customer at our Bariga Branch since 2008.</p>
+                                </div>
+                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                    <div class="testimonial-info d-flex">
+                                        <div class="title">
+                                            <h5>Yusuf, Rainat Anike</h5>
+                                            <p>Owns a Provision Store</p>
+                                        </div>
+                                        <div class="avatar"><img alt="" src="img/testimonial-5.jpg" class="img-fluid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item wow slideInRight">
+                            <div class="testimonial d-flex flex-wrap">
+                                <div class="text">
+                                    <p>
+                                        I appreciate the support Accion Microfinance Bank has given my business to grow it to the level it is today. I have been able to support my family and today, most of my children are graduates, with the last child in the University.
+                                    </p>
+                                    <p style="color:#ea7600;">Customer at our Oke-Arin Branch since 2007.</p>
+                                </div>
+                                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                                    <div class="testimonial-info d-flex">
+                                        <div class="title">
+                                            <h5>Fujah, Amudalat Atinuke</h5>
+                                            <p>Owns a Provision Store</p>
+                                        </div>
+                                        <div class="avatar"><img alt="" src="img/testimonial-5.jpg" class="img-fluid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Carousel End-->
+                </div>
+            </section>
+
+            <div th:insert="~{footer :: accionMFBFooter}"></div>
+        </div>
+        <!-- Javascript files-->
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/jquery-1.12.4.js"></script>
+        <script src="/js/jquery-ui.min.js"></script>
+        <script src="/js/tooltip.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.cookie.js"></script>
+        <script src="/js/jquery.waypoints.min.js"></script>
+        <script src="/js/jquery.counterup.min.js"></script>
+        <script src="/js/owl.carousel.min.js"></script>
+        <script src="/js/owl.carousel2.thumbs.min.js"></script>
+        <script src="/js/jquery.parallax-1.1.3.js"></script>
+        <script src="/js/bootstrap-select.min.js"></script>
+        <script src="/js/jquery.scrollTo.min.js"></script>
+        <script src="/js/front.js"></script>
+        <script src="/js/wow.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Add smooth scrolling to all links in navbar + footer link
+                $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+                                        // Make sure this.hash has a value before overriding default behavior
+                                        if (this.hash !== "") {
+                                            // Prevent default anchor click behavior
+                                            event.preventDefault();
+
+                                            // Store hash
+                                            var hash = this.hash;
+
+                                            // Using jQuery's animate() method to add smooth page scroll
+                                            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                                            $('html, body').animate({
+                                                scrollTop: $(hash).offset().top
+                                            }, 900, function () {
+
+                                                // Add hash (#) to URL when done scrolling (default click behavior)
+                                                window.location.hash = hash;
+                                            });
+                                        } // End if
+                                    });
+                $(window).scroll(function () {
+                                        $(".slideanim").each(function () {
+                                            var pos = $(this).offset().top;
+                                            var winTop = $(window).scrollTop();
+                                            if (pos < winTop + 600) {
+                                                $(this).addClass("slide");
+                                            }
+                                        });
+                                    });
+
+                new WOW().init();
+                var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+                  (function () {
+                                        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                                        s1.async = true;
+                                        s1.src = 'https://embed.tawk.to/5ad5d6655f7cdf4f0532fbc6/default';
+                                        s1.charset = 'UTF-8';
+                                        s1.setAttribute('crossorigin', '*');
+                                        s0.parentNode.insertBefore(s1, s0);
+                                    })();
+               });
+                $('[data-toggle="popover"]').popover();
+        </script>
+    </body>
+</html>

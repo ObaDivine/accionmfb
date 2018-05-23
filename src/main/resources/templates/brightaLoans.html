@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div th:fragment="loanCarousel">
+            <div class="project owl-carousel mb-4">
+                <div class="item"><img th:src="@{/img/product/product_1.png}" alt="" class="img-fluid"></div>
+                <div class="item"><img th:src="@{/img/product/product_4.png}" alt="" class="img-fluid"></div>
+                <div class="item"><img th:src="@{/img/product/product_2.png}" alt="" class="img-fluid"></div>
+                <div class="item"><img th:src="@{/img/product/product_3.png}" alt="" class="img-fluid"></div>
+            </div>
+        </div>
+        <div th:fragment="loanSideMenu">
+            <div class="panel-body">
+                <ul class="nav nav-pills flex-column text-sm">
+                    <li class="nav-item"><a th:href="@{/products/brighta-myown-loan}" class="nav-link active">My Own Loan</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-myown-loan-plus}" class="nav-link">My Own Loan Plus</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-myown-asset-loan}" class="nav-link">My Own Asset Loan</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-plwd}" class="nav-link">People Living With Disability</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-myown-home-loan}" class="nav-link">My Own Home Loan</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-myloan}" class="nav-link">My Loan</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-myagent}" class="nav-link">My Agent</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-paygo}" class="nav-link">PayGo</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-school-plus}" class="nav-link">School Plus</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-school-xtra}" class="nav-link">School Extra</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-sme-education}" class="nav-link">SME Education</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-sme-capital}" class="nav-link">SME Capital</a></li>
+                    <li class="nav-item"><a th:href="@{/products/brighta-sme-solar}" class="nav-link">Brighta Solar</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Contact Us</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active">Contact Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="maps"><img th:src="@{/img/about/head_office_map.png}"/></div>
+            <br/>
+            <div id="contact" class="container">
+                <section id="contact-us-details">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card text-center wow fadeInUp">
+                                <div class="card-header green-header">
+                                    Corporate Head Office
+                                </div>
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <div class="box-simple">
+                                            <div class="icon-outlined"><i class="fa fa-map-marker"></i></div>
+                                            <p><strong>Accion Microfinance Bank Limited.</strong><br>332A Elizade Plaza <br>Ikorodu Road, Anthony <br>Lagos <br>Nigeria</p>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card text-center wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="card-header green-header">
+                                    Accion MfB Call Center
+                                </div>
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <div class="box-simple">
+                                            <div class="icon-outlined"><i class="fa fa-phone"></i></div>
+                                            <p class="text-muted text-sm">If you prefer calling us, use this number otherwise we advise you to use the electronic form of communication.</p>
+                                            <p><strong>+234 1 2951010</strong></p>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card  text-center wow fadeInUp" data-wow-delay="0.9s">
+                                <div class="card-header green-header">
+                                    Electronic Support
+                                </div>
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <div class="box-simple">
+                                            <div class="icon-outlined"><i class="fa fa-envelope"></i></div>
+                                            <p class="text-muted text-sm">Please feel free to write an email to us or to use our electronic ticketing system.</p>
+                                            <ul class="list-unstyled text-sm">
+                                                <li><strong><a href="mailto:">info@accionmfb.com</a></strong></li>
+                                                <li><strong><a href="#">Ticketio</a></strong> - our ticketing support platform</li>
+                                            </ul>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="contact-us-form">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}">..</div>
+                            <div class="card border-secondary bg-light mb-3 wow fadeInUp" data-wow-delay="1s">
+                                <div class="card-header text-center text-bold text-center green-header">Contact Accion MfB</div>
+                                <div class="card-body text-secondary">
+                                    <form id="contactUsForm" th:action="@{/contact/submit-contact-form}" th:object="${contactUsForm}" method="POST">
+                                        <div class="form-row">
+                                            <div class="col-sm-3 form-control-sm">Surname</div>
+                                            <div class="col-sm-6"><input type="text" class="form-control form-control-sm" th:field="*{surname}" placeholder="Surname"/></div>
+                                            <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('surname')}" class="help-block" th:errors="*{surname}"></span></div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-sm-3 form-control-sm">Other Names</div>
+                                            <div class="col-sm-6"><input type="text" class="form-control form-control-sm" th:field="*{otherNames}" placeholder="First name and middle name"/></div>
+                                            <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('otherNames')}" class="help-block" th:errors="*{otherNames}"></span></div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-sm-3 form-control-sm">Email</div>
+                                            <div class="col-sm-6">
+                                                <input type="email" class="form-control form-control-sm" th:field="*{email}" placeholder="Email like : brian@accion.com"/>
+                                            </div>
+                                            <div class="col-sm-3 form-control-sm">
+                                                <span th:if="${#fields.hasErrors('email')}" class="help-block" th:errors="*{email}"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-sm-3 form-control-sm">Phone Number</div>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control form-control-sm" th:field="*{phoneNumber}" placeholder="Phone number"/>
+                                            </div>
+                                            <div class="col-sm-3 form-control-sm">
+                                                <span th:if="${#fields.hasErrors('phoneNumber')}" class="help-block" th:errors="*{phoneNumber}"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-sm-3 form-control-sm">Subject</div>
+                                            <div class="col-sm-6">
+                                                <select th:field="*{subject}"  class="form-control form-control-sm">
+                                                    <option value="">--Select--</option>
+                                                    <option th:each="subj : ${enquiryCategories}" 
+                                                            th:value="${subj}" 
+                                                            th:text="${subj}">
+                                                    </option>
+                                                </select> 
+                                            </div>
+                                            <div class="col-sm-3 form-control-sm">
+                                                <span th:if="${#fields.hasErrors('subject')}" class="help-block" th:errors="*{subject}"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-sm-3 form-control-sm">Message</div>
+                                            <div class="col-sm-6">
+                                                <textarea class="form-control form-control-sm" th:field="*{message}" placeholder="Message"></textarea>
+                                            </div>
+                                            <div class="col-sm-3 form-control-sm">
+                                                <span th:if="${#fields.hasErrors('message')}" class="help-block" th:errors="*{message}"></span>
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <div class="form-row">
+                                            <div class="col-sm-3"></div>
+                                            <div class="form-actions col-6">
+                                                <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i> Send message</button>
+                                            </div>
+                                            <div class="col-sm-3"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h2">Accion Media</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active">Press Release</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <!-- MENUS AND WIDGETS -->
+                        <div class="panel panel-default sidebar-menu with-icons">
+                            <div class="panel-heading">
+                                <h3 class="h4 panel-title">Accion Press Release</h3>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="nav nav-pills flex-column text-sm">
+                                    <li class="nav-item"><a th:href="@{/media/news-and-events}" class="nav-link active">News and Events</a></li>
+                                    <li class="nav-item"><a th:href="@{/media/press-release}" class="nav-link">Press Release</a></li>
+                                    <li class="nav-item"><a th:href="@{/media/milestone}" class="nav-link">Accion Milestone</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div id="accordion" role="tablist" class="mb-5">
+                            <div class="card">
+                                <div id="cibnCommendationCard" role="tab" class="card-header">
+                                    <h5 class="mb-0"><a data-toggle="collapse" href="#cibnCommendation" aria-expanded="true" aria-controls="collapseOne">CIBN Commends Accion Microfinance Bank - 2015/02/10</a></h5>
+                                </div>
+                                <div id="cibnCommendation" role="tabpanel" aria-labelledby="cibnCommendation" data-parent="#accordion" class="collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: center;"><img th:src="@{/img/media/cibn-commendation.jpg}" alt="" class="img-fluid"></div>
+                                        </div>
+                                        <br/>
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: justify">
+                                                11th February 2015. Lagos, Nigeria. The Chartered Institute of Bankers of Nigeria (CIBN) has commended Accion Microfinance Bank for its commitment to financial inclusion, relentless support for the development of microfinance andefforts towards economically empowering micro-entrepreneurs and low-income earners. This commendation was made by the President/Chairman of Council of the Chartered Institute Otunba (Mrs) 'Debola Osibogun during her visit to Accion Microfinance Bank.
+                                                <br/><br/>
+                                                Speaking during the visit, Accion Microfinance Bank MD/CEO Bunmi Lawson said, “Accion Microfinance Bank is pleased to be recognized by the CIBN for our efforts in the industry. As the bank is expanding across Nigeria, we will continue to provide sustainable financial services to reach the unserved and underserved in the country.”
+                                                <br/><br/>
+                                                Otunba Osibogun also noted with satisfaction, Accion Microfinance Bank’s contributions to the Institute’s endowment fund stating that it would further engender professionalism and stimulate improved performance by students writing the CIBN Microfinance Certification Examinations. “This is a valuable contribution towards supporting capacity building for the microfinance banking sector and, by extension, the economy at large”, she said. She stated further that the Institute’s core mandates includes determination of the standards of knowledge and skill to be attained by persons seeking to become members of the banking profession; conduct of professional examinations leading to the award of certificates as may be prescribed by the Institute and ensuring the furtherance, maintenance and observance of ethical standards and professionalism among practitioners of the banking profession in Nigeria.
+                                                <br/><br/>
+                                                The CIBN President while congratulating Accion Microfinance Bank on their enviable achievements in implementing financial inclusion strategy, encouraged Microfinance banks in the country to work out a smooth process of accessing the intervention fund provided by the Central Bank of Nigeria for Economic development as well as develop business strategies that would enable them to attract targeted customers. The President who was accompanied by Dr. Uche Olowu, FCIB, 2nd Vice President; Mr. Seye Awojobi, FCIB, Ag. Registrar/CE, and other top officials assured that the Institute will continue to support the banking industry as well as the microfinance sub-sector to realize their objectives.
+                                                <br/><br/>
+                                                Accion Microfinance Bank recently won the EFInA Award for the financial service provider that has deepened financial inclusion in Nigeria in the microfinance category as well as LEAD Award for Best Microfinance Bank 2014.                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div id="excellentServiceCard" role="tab" class="card-header">
+                                    <h5 class="mb-0"><a data-toggle="collapse" href="#excellenceService" aria-expanded="false" aria-controls="excellentService" class="collapsed">Accion MFB Receives Accolades For Excellent Service - 2015-01-15</a></h5>
+                                </div>
+                                <div id="excellenceService" role="tabpanel" aria-labelledby="bestPlace" data-parent="#accordion" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: center;"><img th:src="@{/img/media/excellent-service.jpg}" alt="" class="img-fluid"></div>
+                                        </div>
+                                        <br/>
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: justify">
+                                                15th January, 2015. Lagos, Nigeria. Accion Microfinance Bank has been commended for her commitment to customer service and business excellence at her Annual Customer Forum which held in Lagos. The Accion Microfinance Bank Annual Customer Forum is an interactive event where customers are celebrated and appreciated for their loyalty to the bank whilst the bank shares information on products and services.
+                                                <br/><br/>
+                                                Speaking at the event, Ms Bunmi Lawson MD/CEO Accion Microfinance Bank said, “Accion Microfinance Bank delivers efficient, quality and seamless services through our numerous delivery channels and products.  As the bank is expanding across Nigeria, we will continue to provide sustainable financial services to people at the bottom of pyramid, making the future of our customers brighter through products and services that help us address their needs.”
+                                                <br/><br/>
+                                                Many customers were awarded for their loyalty to the bank. Mrs. Olufelo Kehinde was awarded as the Best Loan Client of the year for the second year running.  “I feel honoured to be recognised for a second year. Accion is really great” she said.  Several customers also expressed their satisfaction with the bank for giving them easy access to loans and other financial services.
+                                                <br/><br/>
+                                                Accion Microfinance Bank disbursed over 1billion naira in loans to customers in December 2014.  This is a phenomenal achievement for just one month. The bank which also plans to expand into other states this year, has several products and services which include loans for SME, Education, Housing, ATM Cards and products for people with disabilities amongst others. Accion Microfinance Bank is expanding into other states of the federation in furtherance of her commitment to financial inclusion in Nigeria.                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div id="schoolBagsCard" role="tab" class="card-header">
+                                    <h5 class="mb-0"><a data-toggle="collapse" href="#schoolBags" aria-expanded="false" aria-controls="schoolBag" class="collapsed">A presentation of schools bags and writing material - 2014/05/26</a></h5>
+                                </div>
+                                <div id="schoolBags" role="tabpanel" aria-labelledby="schoolBag" data-parent="#accordion" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: center;"><img th:src="@{/img/media/easy-banking.jpg}" alt="" class="img-fluid"></div>
+                                        </div>
+                                        <br/>
+                                        <div class="row">
+                                            <div class="col-md-12" style="text-align: justify">
+                                                A presentation of schools bags and writing material is made to school children in Ajah and Agidingbi to celebrate Children’s Day
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            setTimeout(function () {
+                $('#accountAdModal').modal('show');
+            }, 5000);
+        </script>
+    </head>
+    <body>
+        <div class="modal" id="accountAdModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div>
+                            <img th:src="@{/img/product/account_banner.png}" style="width:100%;height:100%;"/>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <a th:href="@{/products/open-brighta-account}" id="accountOpening" class="btn btn-dark btn-lg modal-call-to-action">Open Account</a>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Accion Accounts</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active">Brighta Accounts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <section id="accionProducts_1">
+            <div id="contact" class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" >
+                            <div class="card-header green-header">
+                                Brighta Purse
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This is Esusu (day to day) collections of daily sales from customers.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Available for individuals</li>
+                                <li class="list-group-item text-sm">Opening minimum balance N500.00</li>
+                                <li class="list-group-item text-sm">Esus collection</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-purse}" class="btn green-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp">
+                            <div class="card-header green-header">
+                                Brighta Xtra
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This allows third party withdrawal with valid for clearing cheques.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Unlimited withdrawal</li>
+                                <li class="list-group-item text-sm">Opening balance individual N2,000.00, company N5,000.00</li>
+                                <li class="list-group-item text-sm">Allow third party withdrawal</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-xtra}" class="btn green-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp">
+                            <div class="card-header green-header">
+                                Brighta Future
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>Target savings that will accommodate customer’s future expenditure.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush" style="background-color:#6bbbae;">
+                                <li class="list-group-item text-sm">Available to associations, cooperative, unions</li>
+                                <li class="list-group-item text-sm">Opening balance N1,000.00</li>
+                                <li class="list-group-item text-sm">Savings period 120 days</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-future}" class="btn green-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp">
+                            <div class="card-header green-header">
+                                Brighta Investor
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This create opportunity for customers to invest their fund with Accion MfB for a higher return.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">COT free</li>
+                                <li class="list-group-item text-sm">Opening balance N100,000.00</li>
+                                <li class="list-group-item text-sm">Minimum deposit tenure 30days</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-socio-investor}" class="btn green-header">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br/>
+        <section id="accionProducts_2">
+            <div id="contact" class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="card-header seablue-header">
+                                Brighta Togeda
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This is a joint account for that for joint savings between two or more persons.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Suitable as joint account</li>
+                                <li class="list-group-item text-sm">Opening minimum balance N1,000.00</li>
+                                <li class="list-group-item text-sm">Esus collection</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-purse}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="card-header seablue-header">
+                                Save Brighta
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This product aims to encourages savings for three months and get 2X the amount saved as a loan.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Open account on Phone</li>
+                                <li class="list-group-item text-sm">4.2% interest rate</li>
+                                <li class="list-group-item text-sm">8% interest on loan</li>
+                            </ul>
+                            <a th:href="@{/products/save-brighta}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="card-header seablue-header">
+                                Brighta Socio Investor
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This create opportunity for Accion MfB customers to refer customers to benefit for loan.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Free COT</li>
+                                <li class="list-group-item text-sm">Opening balance N150,000.00</li>
+                                <li class="list-group-item text-sm">Minimum deposit term of 6 months</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-socio-investor}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="card-header seablue-header">
+                                Brighta Plus
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This product by Accion MfB allows third party withdrawal from account with cheques not valid for clearing using our channel.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Allow third party withdrawal</li>
+                                <li class="list-group-item text-sm">Opening balance N1,000.00</li>
+                                <li class="list-group-item text-sm">Unlimited withdrawals</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-plus}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

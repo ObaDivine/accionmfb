@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Accion Privacy Policy</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/about/about-accion}">About Accion</a></li>
+                            <li class="breadcrumb-item active">Privacy Policy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <!-- MENUS AND WIDGETS -->
+                        <div class="panel panel-default sidebar-menu with-icons">
+                            <div class="panel-heading">
+                                <h3 class="h4 panel-title">Privacy Policy</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div th:insert="~{aboutUs :: aboutUsSideMenu}"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="card">
+                            <div class="card-header green-header">
+                                Privacy Policy
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Accion Microfinance Bank Limited and its employees (we) are committed to maintain highest confidentiality. Consequently, we understand and respect the fact that all information acquired in relation to our clients and their transactions must be handled with strictest confidence and privacy.
+                                    <br/><br/>
+                                    We hereby undertake that any information obtained in respect of a client shall be subject to the highest standards of privacy, security and confidentiality and such information will not be disclosed to any person other than as required by any statute/law for the time being in force in the Federal Republic of Nigeria.
+                                    <br/><br/>
+                                    We shall collect, retain, and use your nonpublic personal information only for specific business purposes such as maintaining your accounts and records, providing you with opportunities for new products and services, complying with laws and regulations and meeting your financial needs.
+                                    <br/><br/>
+                                    We may however provide information about our Clients for the purpose of verification and risk management, we will disclose only the minimum information required for that purpose and will ensure that such information is only provided to reputable reference services.
+                                    <br/><br/>
+                                    We do not provide third party information and as such are in no position to disclose your information to third parties in any manner.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

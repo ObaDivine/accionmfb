@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">PayGo Loan</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/products/brighta-loans}">Loans</a></li>
+                            <li class="breadcrumb-item active">PayGo Loan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <section class="bar">
+                    <div class="row portfolio-project">
+                        <div class="col-sm-3">
+                            <!-- MENUS AND WIDGETS -->
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div th:insert="~{brightaLoans :: loanSideMenu}"></div>
+                            </div>
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div class="panel-heading">
+                                    <h3 class="h4 panel-title">Brighta Accounts</h3>
+                                </div>
+                                <div th:insert="~{brightaProducts :: productSideMenu}"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="project-more">
+                                <div th:insert="~{brightaLoans :: loanCarousel}"></div>
+                                <h4>PayGo Loan</h4>
+                                <p>This loan serves as working capital mainly for SMEs and fast moving consumer goods and services(FMCG).</p>
+                                <div class="card-deck">
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Features</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Short term loan of up to 3 months</li>
+                                                <li class="list-group-item">Access to loan of up to N1,000,000.00</li>
+                                                <li class="list-group-item">Competitive interest rate @ 7% on outstanding balance and further down to 6% by 2nd cycle</li>
+                                                <li class="list-group-item">Insured loan of 1%.</li>
+                                                <li class="list-group-item">Admin fee of 1%</li>
+                                                <li class="list-group-item">Commitment fee of 1%</li>
+                                                <li class="list-group-item">10% Equity contribution</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Benefits</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Addresses the credit needs of SMEs and FMCG</li>
+                                                <li class="list-group-item">Interest applicable only to accessed amount of approved loan limit</li>
+                                                <li class="list-group-item">Easy Loan Procedure</li>
+                                                <li class="list-group-item">Opportunity to control the effective interest rate</li>
+                                                <li class="list-group-item">Opportunity to grow business relationship with Accion MfB</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Requirements</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Prove of business ownership and experience</li>
+                                                <li class="list-group-item">A/C opening and proper documentation required </li>
+                                                <li class="list-group-item">Viable business</li>
+                                                <li class="list-group-item">MSM Entrepreneurs with 12 months experience</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a th:href="@{/career/career-path}" class="btn btn-default">Open Account</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

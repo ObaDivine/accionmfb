@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function getLGAs() {
+                $.ajax
+                   ({
+                            url: "/agent-banking/get-state-lgas",
+                            type: "POST",
+                            cache: false,
+                            dataType: "JSON",
+                            data: {state: $("#state").val(), lga: $('#lga').val()},
+                            success: function (data) {
+                                var html = '<option value="">--Select--</option>';
+                                var len = data.length;
+                                for (var i = 0; i < len; i++) {
+                                    html += '<option value="' + data[i] + '">'
+                                            + data[i] + '</option>';
+                                }
+                                html += '</option>';
+                                $('#lga').html(html);
+                            },
+                            error: function (xhr, status) {
+                                alert(status);
+                            }
+                        });
+            };
+        </script>
+    </head>
+    <body>
+        <div class="modal fade" id="agentModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4>Find Accion Agent(s)</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form id="agentSearchForm" th:action="@{/channels/agent-banking/get-filtered-agents}" th:object="${statesAndLGAs}" method="POST">
+                            <div class="form-row">
+                                <div class="col-sm-3 form-control-sm">State</div>
+                                <div class="col-sm-6">
+                                    <select th:field="*{state}" th:onchange="|getLGAs()|" class="form-control form-control-sm">
+                                        <option value="">--Select--</option>
+                                        <option th:each="state : ${states}" 
+                                                th:value="${state}" 
+                                                th:text="${state}">
+                                        </option>
+                                    </select> 
+                                </div>
+                                <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('state')}" class="help-block" th:errors="*{state}"></span></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-sm-3 form-control-sm">L.G.A</div>
+                                <div class="col-sm-6">
+                                    <select th:field="*{lga}" class="form-control form-control-sm">
+                                        <option value="">--Select--</option>
+                                        <option th:each="lga : ${lgas}" 
+                                                th:value="${lga}" 
+                                                th:text="${lga}">
+                                        </option>
+                                    </select> 
+                                </div>
+                                <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('lga')}" class="help-block" th:errors="*{lga}"></span></div>
+                            </div>
+                            <br/>
+                            <div class="form-row">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-6"><button type="submit" class="btn btn-secondary">Submit</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Accion Agent Banking</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active">Agent Banking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <section id="agentBanking">
+                        <div class="card" style="width: 40rem;">
+                            <img class="card-img-top" th:src="@{/img/service/service_1.png}" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Accion Agent Banking</h4>
+                                <p class="card-text">The Accion MfB Agent Banking is another way we bring banking closer to you! 
+                                    An Accion MfB Agent Banking Agent is a distinguished customer of the Bank who has his or her own retail shop and represents the Bank by providing banking services to all Accion MfB clients and to the general public.</p>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Why You Should Visit Our Agents</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">An Accion Agent is located in a branch near you</li>
+                                    <li class="list-group-item">It saves you time and money and transactions are 100% safe</li>
+                                    <li class="list-group-item">It is available whenever the market opens</li>
+                                    <li class="list-group-item">You must have a data enabled phone to provide the services in your shop</li>
+                                </ul><br/>
+                                <a th:href="@{/channels/agent-banking/get-agents/auto}" class="btn btn-primary text-light"> Find Accion Agents Near Me</a>
+                                <a class="btn btn-secondary text-light bg-gray-dark" data-toggle="modal" data-target="#agentModal"> Find Accion Agents Across Nigeria</a>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <section id="becomingAgent">
+                        <div class="card border-secondary mb-3 wow slideInRight" data-wow-delay="0.2s" style="max-width: 32rem;">
+                            <div class="card-header text-center text-bold green-header"><h4>Accion Agent Banking Services</h4></div>
+                            <div class="card-body text-secondary">
+                                <div class="row">
+                                    <div class="col-sm-2"><i class="fa fa-briefcase text-primary" style="font-size:1.6em;"></i></div>
+                                    <div class="col-sm-10">Repay your Accion loan</div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-sm-2"><i class="fa fa-mobile-phone text-primary" style="font-size:1.6em;"></i></div>
+                                    <div class="col-sm-10">Buy airtime from MTN, GLO, Airtel and others</div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-sm-2"><i class="fa fa-tv text-primary" style="font-size:1.6em;"></i></div>
+                                    <div class="col-sm-10">Pay for utility bills such as PHCN, DSTV, GoTV</div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-sm-2"><i class="fa fa-money text-primary" style="font-size:1.6em;"></i></div>
+                                    <div class="col-sm-10">Make cash deposit into Accion MfB account</div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-sm-2"><i class="fa fa-share text-primary" style="font-size:1.6em;"></i></div>
+                                    <div class="col-sm-10">Do fund transfer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="card border-secondary mb-3 wow slideInRight" data-wow-delay="0.2s" style="max-width:35rem;">
+                            <div class="card-header text-center text-bold green-header"><h4>How To Use Accion Agent Banking<h4></div>
+                            <div class="card-body text-secondary">
+                                <div class="row">
+                                    <div class="col-sm-2"><i class="fa fa-check-square text-primary" style="font-size:1.6em;"></i></div>
+                                    <div class="col-sm-10">Go to an Accion banking agent close to you</div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-sm-2"><i class="fa fa-check-square text-primary" style="font-size:1.6em;"></i></div>
+                                    <div class="col-sm-10">Tell the agent the type of transaction you wish to carry out</div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-sm-2"><i class="fa fa-check-square text-primary" style="font-size:1.6em;"></i></div>
+                                    <div class="col-sm-10">On successful transaction, ask agent for receipt</div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-sm-2"><i class="fa fa-check-square text-primary" style="font-size:1.6em;"></i></div>
+                                    <div class="col-sm-10">Check your phone for SMS alert on the transaction</div>
+                                </div>
+                                <br/>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card" >
+                        <div class="card-body">
+                            <h4 class="card-title">Accion Agent Banking</h4>
+                            <p class="card-text">The Accion MfB Agent Banking is another way we bring banking closer to you! 
+                                An Accion MfB Agent Banking Agent is a distinguished customer of the Bank who has his or her own retail shop and represents the Bank by providing banking services to all Accion MfB clients and to the general public.</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6" style="border-right:2px solid gray;">
+                                    <h4 class="card-title">Why Become an Accion Agent</h4>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">You become preferred partner of Accion MfB. As an Agent, you actually represent the bank. This gives you recognition and status with your customers and community.</li>
+                                        <li class="list-group-item">More customers in your shop which means increased traffic to your business and the opportunity to increase sales.</li>
+                                        <li class="list-group-item">You do not need to invest any money to become an agent. Accion MfB can provide you with convenient loan if you need cash for daily transactions.</li>
+                                        <li class="list-group-item">4.	You will earn extra income.</li>
+                                    </ul>
+                                    <br/>
+                                    <h4 class="card-title">Why You Should Visit Our Agents</h4>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">You must be a customer of Accion MfB with a good loan/saving records.</li>
+                                        <li class="list-group-item">Signify interest by visiting any Accion MfB branch near you and a branch agent supervisor will attend to you.</li>
+                                        <li class="list-group-item">Your business must be located at a very visible point with heavy pedestrian traffic.</li>
+                                        <li class="list-group-item">You must have a startup fund of N5,000.00</li>
+                                        <li class="list-group-item">You must have an android phone to do a transaction</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-secondary bg-light mb-3 wow slideInUp" data-wow-delay="0.4s" style="max-width: 45rem;">
+                                        <div class="card-header text-center text-primary text-bold"><h4>Become An Accion Agent</h4></div>
+                                        <div class="card-body text-secondary">
+                                            <form id="employeeForm" th:action="@{/channels/agent-banking/create-agent}" th:object="${agentBanking}" method="POST">
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Surname</div>
+                                                    <div class="col-sm-6"><input type="text" class="form-control form-control-sm" maxlength="32" th:field="*{surname}" placeholder="Surname"/></div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('surname')}" class="help-block" th:errors="*{surname}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Other Names</div>
+                                                    <div class="col-sm-6"><input type="text" class="form-control form-control-sm" th:field="*{otherNames}" placeholder="First name and middle name"/></div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('otherNames')}" class="help-block" th:errors="*{otherNames}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Date of Birth</div>
+                                                    <div class="col-sm-6"><input type="date" class="form-control form-control-sm" th:field="*{doB}" placeholder="Date of birth"/></div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('doB')}" class="help-block" th:errors="*{doB}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Gender</div>
+                                                    <div class="col-sm-6">
+                                                        <select th:field="*{gender}"  class="form-control form-control-sm">
+                                                            <option value="">--Select--</option>
+                                                            <option th:each="sex : ${genders}" 
+                                                                    th:value="${sex}" 
+                                                                    th:text="${sex}">
+                                                            </option>
+                                                        </select> 
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('gender')}" class="help-block" th:errors="*{gender}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Contact Address</div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control form-control-sm" th:field="*{contactAddress}" placeholder="Contact address"/>
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm">
+                                                        <span th:if="${#fields.hasErrors('contactAddress')}" class="help-block" th:errors="*{contactAddress}"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Email</div>
+                                                    <div class="col-sm-6">
+                                                        <input type="email" class="form-control form-control-sm" th:field="*{email}" placeholder="Email like : brian@accion.com"/>
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm">
+                                                        <span th:if="${#fields.hasErrors('email')}" class="help-block" th:errors="*{email}"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Phone Number</div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control form-control-sm" th:field="*{phoneNumber}" placeholder="Phone number"/>
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm">
+                                                        <span th:if="${#fields.hasErrors('phoneNumber')}" class="help-block" th:errors="*{phoneNumber}"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Business Name</div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control form-control-sm" th:field="*{businessName}" placeholder="Business name"/>
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm">
+                                                        <span th:if="${#fields.hasErrors('businessName')}" class="help-block" th:errors="*{businessName}"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Business Address</div>
+                                                    <div class="col-sm-6">
+                                                        <input type="datetime" class="form-control form-control-sm" th:field="*{businessAddress}" placeholder="Business address"/>
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm">
+                                                        <span th:if="${#fields.hasErrors('businessAddress')}" class="help-block" th:errors="*{businessAddress}"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">RC Number</div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control form-control-sm" th:field="*{companyRegNo}" placeholder="Company registration number"/>
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm">
+                                                        <span th:if="${#fields.hasErrors('companyRegNo')}" class="help-block" th:errors="*{companyRegNo}"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Business State</div>
+                                                    <div class="col-sm-6">
+                                                        <select th:field="*{businessState}"  class="form-control form-control-sm">
+                                                            <option value="">--Select--</option>
+                                                            <option th:each="state : ${states}" 
+                                                                    th:value="${state}" 
+                                                                    th:text="${state}">
+                                                            </option>
+                                                        </select> 
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm">
+                                                        <span th:if="${#fields.hasErrors('businessState')}" class="help-block" th:errors="*{businessState}"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Business LGA</div>
+                                                    <div class="col-sm-6">
+                                                        <select th:field="*{businessLGA}"  class="form-control form-control-sm">
+                                                            <option value="">--Select--</option>
+
+                                                        </select> 
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm">
+                                                        <span th:if="${#fields.hasErrors('businessLGA')}" class="help-block" th:errors="*{businessLGA}"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Business Type</div>
+                                                    <div class="col-sm-6">
+                                                        <select th:field="*{businessType}"  class="form-control form-control-sm">
+                                                            <option value="">--Select--</option>
+                                                            <option th:each="type : ${businessTypes}" 
+                                                                    th:value="${type}" 
+                                                                    th:text="${type}">
+                                                            </option>
+                                                        </select> 
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm">
+                                                        <span th:if="${#fields.hasErrors('businessType')}" class="help-block" th:errors="*{businessType}"></span>
+                                                    </div>
+                                                </div>
+                                                <br/>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3"></div>
+                                                    <div class="col-sm-6"><button type="submit" class="btn btn-secondary">Submit</button></div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

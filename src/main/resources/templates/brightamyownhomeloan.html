@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">My Own Home Loa</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/products/brighta-loans}">Loans</a></li>
+                            <li class="breadcrumb-item active">My Own Home Loan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <section class="bar">
+                    <div class="row portfolio-project">
+                        <div class="col-sm-3">
+                            <!-- MENUS AND WIDGETS -->
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div th:insert="~{brightaLoans :: loanSideMenu}"></div>
+                            </div>
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div class="panel-heading">
+                                    <h3 class="h4 panel-title">Brighta Accounts</h3>
+                                </div>
+                                <div th:insert="~{brightaProducts :: productSideMenu}"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="project-more">
+                                <div th:insert="~{brightaLoans :: loanCarousel}"></div>
+                                <h4>My Own Home Loan</h4>
+                                <p>This is a micro housing loan for home improvements & extensions, bit by bit constructions of shops, schools, clinics and bungalows.</p>
+                                <div class="card-deck">
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Features</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Access to housing loan of up to N5million</li>
+                                                <li class="list-group-item">Collateral required</li>
+                                                <li class="list-group-item">Tenor up to 2 Years</li>
+                                                <li class="list-group-item">Competitive Interest rate @ 3% reducing balance</li>
+                                                <li class="list-group-item">Insured loan of 1%.</li>
+                                                <li class="list-group-item">Admin fee of 1%</li>
+                                                <li class="list-group-item">Commitment fee of 1%</li>
+                                                <li class="list-group-item">Loan can serve as top up to an existing loan</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Benefits</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Easy Loan procedure</li>
+                                                <li class="list-group-item">Affordable and convenient loans</li>
+                                                <li class="list-group-item">Low interest rate</li>
+                                                <li class="list-group-item">Opportunity to own your own house</li>
+                                                <li class="list-group-item">Technical assistance from Lafarge</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Requirements</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Proof of Ownership of an unencumbered landed property with valid documentation</li>
+                                                <li class="list-group-item">Micro entrepreneurs with minimum 12 months’ experience and generates daily or weekly cash sales turnover</li>
+                                                <li class="list-group-item">Operate for a minimum of 6 months in the same location (permanent shops are preferable)</li>
+                                                <li class="list-group-item">Meet all documentation and information – related requirements to Accion</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a th:href="@{/career/career-path}" class="btn btn-default">Open Account</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

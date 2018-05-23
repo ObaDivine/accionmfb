@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            setTimeout(function () {
+                $('#loanAdModal').modal('show');
+            }, 5000);
+        </script>
+    </head>
+    <body>
+        <div class="modal" id="loanAdModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div>
+                            <img th:src="@{/img/product/loan_banner.png}" style="width:100%;height:100%;"/>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <a th:href="@{/products/brighta-loan-request}" id="loanRequest" class="btn btn-dark btn-lg" style="position:absolute; top:88%; left:25%; border-radius: 4px;">Request For Loan</a>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Accion Loans</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active">Brighta Loans</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <section id="accionProducts_1">
+            <div id="product_1" class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp">
+                            <div class="card-header seablue-header">
+                                My Own Loan
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This is a working capital loan for Accion MfB micro customers.</p>
+                                    <br/>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Access loan facility up to N399,000.00</li>
+                                <li class="list-group-item text-sm">No collateral</li>
+                                <li class="list-group-item text-sm">4 - 12 months tenor</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-myown-loan}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp">
+                            <div class="card-header seablue-header">
+                                My Own Loan Plus
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This is a working capital type loan available to Micro and Medium customers.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Access loan from N400,000.00 to N1,000,000.00</li>
+                                <li class="list-group-item text-sm">Competitive interest rate @ 6% on reducing balance</li>
+                                <li class="list-group-item text-sm">10% equity</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-myown-loan-plus}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp">
+                            <div class="card-header seablue-header">
+                                My Own Asset Loan
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>Designed for micro business owners/ entrepreneurs to own a business asset(s) but lack conventional collateral.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Asset is insured</li>
+                                <li class="list-group-item text-sm">Competitive interest rate @ 4-5%</li>
+                                <li class="list-group-item text-sm">Loan up to N5,000,000.00</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-myown-asset-loan}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp">
+                            <div class="card-header seablue-header">
+                                Brighta PayGo
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This loan serves as working capital mainly for SMEs and fast moving consumer goods and services(FMCG).</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Suitable for SME & FMCG</li>
+                                <li class="list-group-item text-sm">Loan tenure up to 3 months</li>
+                                <li class="list-group-item text-sm">Loan up to N1,000,000.00</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-paygo}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br/>
+        <section id="accionProducts_2">
+            <div id="products_2" class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="card-header green-header">
+                                My School Plus Loan
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This loan serves as both working capital and asset development for private schools.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Access loan facility up to N5,000,000.00</li>
+                                <li class="list-group-item text-sm">Interest rate @ 9% p.a</li>
+                                <li class="list-group-item text-sm">Tenure up to 1 year</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-school-plus}" class="btn green-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="card-header green-header">
+                                My School Extra Loan
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This will also serve as both working capital and asset development loan for schools.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Access loan up to N2,000,000.00</li>
+                                <li class="list-group-item text-sm">Strictly for schools and academic institutions</li>
+                                <li class="list-group-item text-sm">5% interest per month</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-school-xtra}" class="btn green-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="card-header green-header">
+                                SME Education Loan
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This is a working capital and asset finance loan for SME operators in education sector.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Access loan up to N10,000,000.00</li>
+                                <li class="list-group-item text-sm">4% rate at reducing balance</li>
+                                <li class="list-group-item text-sm">Insure loan at 1%</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-sme-education}" class="btn green-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="card-header green-header">
+                                SME Capital Loan
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This is a working capital and asset finance loan for business owners & SME.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">4% interest rate at reducing balance</li>
+                                <li class="list-group-item text-sm">Access loan uo to N10,000,000.00</li>
+                                <li class="list-group-item text-sm">Tenure up to 2 years</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-sme-capital}" class="btn green-header">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br/>
+        <section id="accionProducts_3">
+            <div id="product_3" class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="1s">
+                            <div class="card-header seablue-header">
+                                My Own Home Loan
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>Micro housing loan for home improvements & extensions, constructions of shops, schools, clinics and bungalows.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Housing loan up to N5,000,000.00</li>
+                                <li class="list-group-item text-sm">Tenure up to 2 years</li>
+                                <li class="list-group-item text-sm">Interest rate @ 3%</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-myown-home-loan}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="1s">
+                            <div class="card-header seablue-header">
+                                My Loan
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>A loan product designed strictly for pensioners who are in need of working capital loans to assist them in post retirement businesses.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Access loan up to N50,000.00</li>
+                                <li class="list-group-item text-sm">Up to 24 months repayment plan</li>
+                                <li class="list-group-item text-sm">5% interest per month</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-myloan}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="1s">
+                            <div class="card-header seablue-header">
+                                My Agent Loan
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>This is a short term working capital type of loan for agent banking clients of Accion MfB.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">Require client's equity contribution</li>
+                                <li class="list-group-item text-sm">Access loan up to N1,000,000.00</li>
+                                <li class="list-group-item text-sm">3% interest rate at reducing balance</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-myagent}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center wow fadeInUp" data-wow-delay="1s">
+                            <div class="card-header seablue-header">
+                                Brighta Solar
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>A loan product designed to provide alternative power source for businesses and homes of micro, small and medium customers.</p>
+                                </blockquote>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-sm">One year warranty</li>
+                                <li class="list-group-item text-sm">6% interest rate at reducing balance</li>
+                                <li class="list-group-item text-sm">Option for outright purchase</li>
+                            </ul>
+                            <a th:href="@{/products/brighta-sme-solar}" class="btn seablue-header">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div th:fragment="accionMFBHeader">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title th:text="#{app.title}">Accion</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="all,follow">
+        <link th:href="@{/img/favicon.png}" href="/img/favicon.png" rel="icon">
+        <link rel="stylesheet" th:href="@{/css/animate.css}">
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" th:href="@{/css/bootstrap-select.min.css}">
+        <link rel="stylesheet" th:href="@{/css/owl.carousel.css}">
+        <link rel="stylesheet" th:href="@{/css/owl.theme.default.css}">
+        <link rel="stylesheet" th:href="@{/css/style.default.css}" id="theme-stylesheet">
+        <link rel="stylesheet" th:href="@{/css/datatables.min.css}">
+        <link rel="shortcut icon" th:href="@{img/favicon.ico}" type="image/x-icon">
+        <link rel="apple-touch-icon" th:href="@{/img/apple-touch-icon.png}">
+    </head>
+
+            <div id="all">
+                <!-- Top bar-->
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-md-4 d-md-block d-none">
+                            <div>
+                                <span class="fa fa-mobile" style="vertical-align: middle; font-size:18px;"></span>
+                                <span style="font-size: 15px;">234 01-2719325-6</span>&nbsp&nbsp
+                                <span class="fa fa-envelope" style="vertical-align: middle; font-size:18px;"></span>
+                                <span style="font-size: 15px;">info@accionmfb.com</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="icon-bar-menu">
+                                <a th:href="@{/products/brighta-accounts}"title="Accion Accounts" data-toggle="popover" data-trigger="hover" data-content="Accion MfB accounts can accomodate everyone" data-placement="bottom" ><i class="fa fa-briefcase"></i></a> 
+                                <a th:href="@{/products/brighta-loans}" title="Accion Loans" data-toggle="popover" data-trigger="hover" data-content="Click anywhere in the document to close this popover" data-placement="bottom"><i class="fa fa-money"></i></a> 
+                                <a th:href="@{/contact/branch-network}" title="Branch Network" data-toggle="popover" data-trigger="hover" data-content="Click anywhere in the document to close this popover" data-placement="bottom"><i class="fa fa-compass"></i></a> 
+                                <a th:href="@{/channels/mobile-banking}" title="Mobile Banking" data-toggle="popover" data-trigger="hover" data-content="Click anywhere in the document to close this popover" data-placement="bottom"><i class="fa fa-mobile"></i></a>
+                                <a th:href="@{/channels/agent-banking/}" title="Accion Agents" data-toggle="popover" data-trigger="hover" data-content="Click anywhere in the document to close this popover" data-placement="bottom"><i class="fa fa-users"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <script>
+                                (function () {
+                                    var cx = '018198361101943829185:5dmwy7faxt0';
+                                    var gcse = document.createElement('script');
+                                    gcse.type = 'text/javascript';
+                                    gcse.async = true;
+                                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                                    var s = document.getElementsByTagName('script')[0];
+                                    s.parentNode.insertBefore(gcse, s);
+                                })();
+                            </script>
+                           <gcse:searchbox-only></gcse:searcbox-only>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <header class="nav-holder make-sticky" style="border-bottom: 1px solid #a8a800">
+                    <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+                        <div class="container">
+                            <a th:text="#{app.fulltitle}" th:href="@{/}" class="home text-uppercase" style="font-weight: bold; text-decoration: none;">
+                                <img th:src="@{/img/new_logo.png}" alt="Accion MFB logo" class="d-none d-md-inline-block">
+                                <span class="sr-only">Accion MFB</span>
+                            </a>
+                            <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined">
+                                <span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i>
+                            </button>
+                            <div id="navigation" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav ml-auto">
+                                    <li class="nav-item dropdown">
+                                        <a th:href="@{/}" style="color:#ea7600;">Home</a>
+                                    </li>
+                                    <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle" style="color:#ea7600;">Who We Are<b class="caret"></b></a>
+                                        <ul class="dropdown-menu megamenu">
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-lg-3"><img th:src="@{/img/about/logo.png}" alt="" class="img-fluid d-none d-lg-block"></div>
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <h5>About Accion</h5>
+                                                        <ul class="list-unstyled mb-3">
+                                                            <li class="dropdown-item"><a th:href="@{/about/about-accion}" class="nav-link">Accion Values</a></li>
+                                                            <li class="dropdown-item"><a th:href="@{/about/board-of-directors}" class="nav-link">Board of Directors</a></li>
+                                                            <li class="dropdown-item"><a th:href="@{/about/management-team}" class="nav-link">Management Team</a></li>
+                                                            <li class="dropdown-item"><a th:href="@{/about/accion-partners}" class="nav-link">Partners</a></li>
+                                                            <li class="dropdown-item"><a th:href="@{/about/accion-financial}" class="nav-link">Accion Financial</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <h5>News And Events</h5>
+                                                        <ul class="list-unstyled mb-3">
+                                                            <li class="nav-item"><a th:href="@{/media/news-and-events}" class="nav-link">Accion News</a></li>
+                                                            <li class="nav-item"><a th:href="@{/media/accion-events}" class="nav-link">Events</a></li>
+                                                            <li class="nav-item"><a th:href="@{/media/press-release}" class="nav-link">Press Release</a></li>
+                                                            <li class="nav-item"><a th:href="@{/media/press-release}" class="nav-link">Accion Milestone</a></li>
+                                                            <li class="nav-item"><a th:href="@{/media/corporate-responsibility}" class="nav-link">Corporate Responsibility</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle" style="color:#ea7600;">Products<b class="caret"></b></a>
+                                        <ul class="dropdown-menu megamenu">
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-lg-3"><img th:src="@{~/img/about/about_5.png}" alt="" class="img-fluid d-none d-lg-block"></div>
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <h5>Personal</h5>
+                                                        <ul class="list-unstyled mb-3">
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-purse}" class="nav-link">Brighta Purse</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-future}" class="nav-link">Brighta Future</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-investor}" class="nav-link">Brighta Investor</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-together}" class="nav-link">Brighta Togeda</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-plus}" class="nav-link">Brighta Plus</a></li>
+                                                        </ul>
+                                                        <h5>Individual Loans</h5>
+                                                        <ul class="list-unstyled mb-3">
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-myown-loan}" class="nav-link">My Own</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-myown-loan-plus}" class="nav-link">My Own Plus</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-myown-asset-loan}" class="nav-link">My Own Asset</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-plwd}" class="nav-link">People Living With Disability</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-myown-home-loan}" class="nav-link">My Own Home</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-myloan}" class="nav-link">My Loan</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-myagent}" class="nav-link">My Agent</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <h5>SME</h5>
+                                                        <ul class="list-unstyled mb-3">
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-xtra}" class="nav-link">Brighta Xtra</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/save-brighta}" class="nav-link">Save Brighta</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-socio-investor}" class="nav-link">Brighta Socio-Investor</a></li>
+                                                        </ul>
+                                                        <h5>SME Loans</h5>
+                                                        <ul class="list-unstyled mb-3">
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-sme-education}" class="nav-link">SME Education</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-sme-capital}" class="nav-link">SME Capital</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-sme-solar}" class="nav-link">Brighta Solar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <h5>Corporate Loans</h5>
+                                                        <ul class="list-unstyled mb-3">
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-paygo}" class="nav-link">PayGo</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-school-plus}" class="nav-link">My School Plus</a></li>
+                                                            <li class="nav-item"><a th:href="@{/products/brighta-school-xtra}" class="nav-link">My School Extra</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle" style="color:#ea7600;">Services <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item"><a th:href="@{/channels/internet-banking}" class="nav-link">Internet Banking</a></li>
+                                            <li class="dropdown-item"><a th:href="@{/channels/mobile-banking}" class="nav-link">Mobile Banking</a></li>
+                                            <li class="dropdown-item"><a th:href="@{/channels/accion-ussd}" class="nav-link">USSD Transaction</a></li>
+                                            <li class="dropdown-item"><a th:href="@{/channels/agent-banking/}" class="nav-link">Agent Banking</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle" style="color:#ea7600;">Career <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item"><a th:href="@{/career/career-at-accion}" class="nav-link">Life At Accion</a></li>
+                                            <li class="dropdown-item"><a th:href="@{/career/internship}" class="nav-link">Internship</a></li>
+                                            <li class="dropdown-item"><a th:href="@{/career/featured-positions}" class="nav-link">Hiring Now</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle" style="color:#ea7600;">Contact Us <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item"><a th:href="@{/contact/contact-us/}" class="nav-link">Connect To Us</a></li>
+                                            <li class="dropdown-item"><a th:href="@{/contact/branch-network}" class="nav-link">Branch Network</a></li>
+                                            <li class="dropdown-item"><a th:href="@{/contact/atm-network}" class="nav-link">ATM Location</a></li>
+                                            <li class="dropdown-item"><a th:href="@{/contact/frequently-asked-questions}" class="nav-link">FAQ</a></li>
+                                            <li class="dropdown-item"><a th:href="@{/contact/feedback}" class="nav-link">Feedback</a></li>
+                                            <li class="dropdown-item"><a th:href="@{/contact/whistle-blowing}" class="nav-link">Whistle Blowing</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <script th:src="@{/js/jquery.min.js}"></script>
+            <script th:src="@{/js/jquery-1.12.4.js}"></script>
+            <script th:src="@{/js/jquery-ui.min.js}"></script>
+            <script th:src="@{/js/popper.min.js}"></script>
+            <script th:src="@{/js/bootstrap.min.js}"></script>
+            <script th:src="@{/js/jquery.cookie.js}"></script>
+            <script th:src="@{/js/jquery.waypoints.min.js}"></script>
+            <script th:src="@{/js/jquery.counterup.min.js}"></script>
+            <script th:src="@{/js/owl.carousel.min.js}"></script>
+            <script th:src="@{/js/owl.carousel2.thumbs.min.js}"></script>
+            <script th:src="@{/js/jquery.parallax-1.1.3.js}"></script>
+            <script th:src="@{/js/bootstrap-select.min.js}"></script>
+            <script th:src="@{/js/jquery.scrollTo.min.js}"></script>
+            <script th:src="@{/js/front.js}"></script>
+            <script th:src="@{/js/wow.min.js}"></script>
+            <script th:src="@{/js/datatables.min.js}"></script>
+            <script>
+                $(document).ready(function () {
+                    // Add smooth scrolling to all links in navbar + footer link
+                    $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+                        // Make sure this.hash has a value before overriding default behavior
+                        if (this.hash !== "") {
+                            // Prevent default anchor click behavior
+                            event.preventDefault();
+
+                            // Store hash
+                            var hash = this.hash;
+
+                            // Using jQuery's animate() method to add smooth page scroll
+                            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                            $('html, body').animate({
+                                scrollTop: $(hash).offset().top
+                            }, 900, function () {
+
+                                // Add hash (#) to URL when done scrolling (default click behavior)
+                                window.location.hash = hash;
+                            });
+                        } // End if
+                    });
+
+                    $(window).scroll(function () {
+                        $(".slideanim").each(function () {
+                            var pos = $(this).offset().top;
+
+                            var winTop = $(window).scrollTop();
+                            if (pos < winTop + 600) {
+                                $(this).addClass("slide");
+                            }
+                        });
+                    });
+
+                    $('#agentBankingTable').DataTable();
+
+                    $("#businessState").change(function () {
+                        var selectedState = ("#businessState").valueOf();
+                        if ($("businessState").val() != "---Select--") {
+                            $.ajax
+                                    ({
+                                        url: "/accionMFB/nigeria/states/",
+                                        type: "GET",
+                                        cache: false,
+                                        dataType: "JSON",
+                                        data: {state: $("#businessState").val()},
+                                        success: function (Data) {
+                                            $("#businessLGA").html("");
+                                            for (var i = 0; i < Data.length; i++) {
+                                                $("#businessLGA").append("<option>" + Data[i] + "</option>");
+                                            }
+                                        },
+                                        error: function (xhr, status) {
+                                            alert(status);
+                                        }
+                                    });
+                        }
+                        ;
+                    });
+
+                    new WOW().init();
+                    
+                    $('[data-toggle="popover"]').popover();
+
+                });
+            </script>
+            <script>
+                function initMap() {
+                    var uluru = {lat: 6.5643478, lng: 3.3648817};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 4,
+                        center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map
+                    });
+                }
+            </script>
+            <!--Start of Tawk.to Script-->
+            <script type="text/javascript">
+                var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+                (function () {
+                    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                    s1.async = true;
+                    s1.src = 'https://embed.tawk.to/5ad5d6655f7cdf4f0532fbc6/default';
+                    s1.charset = 'UTF-8';
+                    s1.setAttribute('crossorigin', '*');
+                    s0.parentNode.insertBefore(s1, s0);
+                })();
+            </script>
+            <!--End of Tawk.to Script-->
+        </div>     
+    </body>
+</html>

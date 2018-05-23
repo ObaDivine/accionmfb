@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Management Team</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/about/about-accion}">About Accion</a></li>
+                            <li class="breadcrumb-item active">Management Team</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <section class="bar mb-0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading text-center">
+                                <h2>Accion Management Team</h2>
+                            </div>
+                            <p ht:text="#{team.heading}" class="lead"></p>
+                            <div class="tree-chart text-center">
+                                <ul>
+                                    <li>
+                                        <div class="team-member wow slideInDown">
+                                            <div class="image"><img th:src="@{/img/management/md.jpg}" alt="" class="img-fluid rounded-circle" style="width:100px; height:115px;"></div>
+                                            <h3><a th:text="#{team.md.name}" th:href="@{/profile/md}" data-toggle="modal" data-target="#mdModal"></a></h3>
+                                            <p class="role">MD/CEO</p>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <div class="team-member wow slideInUp" data-wow-delay="0.2s">
+                                                    <div class="image"><img th:src="@{/img/management/chief_commercial.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                                    <h3><a th:href="@{/profile/chief-commercial-officer}" data-toggle="modal" data-target="#ccoModal">Nwanna<br/>Joel-Ezeugo</a></h3>
+                                                    <p class="role">Chief <br/>Commercial<br/> Officer</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="team-member wow slideInUp" data-wow-delay="0.2s">
+                                                    <div class="image"><img th:src="@{/img/management/chief_information.jpg}" alt="" class="img-fluid rounded-circle" style="width:100px; height:115px;"></div>
+                                                    <h3><a th:href="@{/profile/chief-information-officer}" data-toggle="modal" data-target="#cioModal">Benedict<br/>Anyalenkeya</a></h3>
+                                                    <p class="role">Chief <br/>Information <br/>Officer</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="team-member wow slideInUp" data-wow-delay="0.2s">
+                                                    <div class="image"><img th:src="@{/img/management/chief_operation.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                                    <h3><a th:href="@{/profile/chief-operation-officer}" data-toggle="modal" data-target="#cooModal">Tunde<br/>Omolere</a></h3>
+                                                    <p class="role">Chief <br/>Operation<br/>Officer</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="team-member wow slideInUp" data-wow-delay="0.2s">
+                                                    <div class="image"><img th:src="@{/img/management/chief_compliance.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                                    <h3><a th:href="@{/profile/chief-compliance-officer}" data-toggle="modal" data-target="#coaModal">Stephen<br/>Olalere</a></h3>
+                                                    <p class="role">Chief<br/>Compliance<br/>Officer<br/>& Audit</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="team-member wow slideInUp" data-wow-delay="0.2s">
+                                                    <div class="image"><img th:src="@{/img/management/head_risk.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                                    <h3><a th:href="@{/profile/head-risk}" data-toggle="modal" data-target="#riskModal">Waheed<br/>Fagbenro</a></h3>
+                                                    <p class="role">Head<br/>Risk & <br/>Control</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="team-member wow slideInUp" data-wow-delay="0.2s">
+                                                    <div class="image"><img th:src="@{/img/management/hr.jpeg}" alt="" class="img-fluid rounded-circle"></div>
+                                                    <h3><a th:href="@{/profile/head-human-resources}" data-toggle="modal" data-target="#hrModal">Christy<br/>Adeyemo</a></h3>
+                                                    <p class="role">Head<br/>Human <br/>Resources</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="team-member wow slideInUp" data-wow-delay="0.2s">
+                                                    <div class="image"><img th:src="@{/img/management/business_banking.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                                    <h3><a th:href="@{/profile/head-business-banking}" data-toggle="modal" data-target="#hbsModal">Emeka<br/>Uzowulu</a></h3>
+                                                    <p class="role">Head<br/>Business Banking <br/>& Up Country</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="team-member wow slideInUp" data-wow-delay="0.2s">
+                                                    <div class="image"><img th:src="@{/img/management/channels_technology.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                                    <h3><a th:href="@{/profile/advisor-channels-technology}" data-toggle="modal" data-target="#ractModal">Oladapo<br/>Famuyide</a></h3>
+                                                    <p class="role">Resident<br/>Advisor<br/>Channels &<br/>Technology</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="team-member wow slideInUp" data-wow-delay="0.2s">
+                                                    <div class="image"><img th:src="@{/img/management/marketing_communication.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                                    <h3><a th:href="@{/profile/head-marketing-communication}" data-toggle="modal" data-target="#mcModal">Robert<br/>Magala</a></h3>
+                                                    <p class="role">Head<br/>Marketing<br/>Communication<br/>&Product<br/>Development</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- The Modal -->
+            <div class="modal fade" id="mdModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 th:text="#{team.md.name}" class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                Mr. Taiwo Adesina Joda is the Managing Director/CEO of Accion Microfinance Bank. He holds a B.Sc. degree in Finance and Banking from the University of Lagos and a Masters degree in Finance and Banking from the same university. He is an Alumnus of Said Business School – Oxford University
+                            </p>
+                            <p>
+                                Mr. Joda is a senior member of the Chartered Institute of Bankers (HCIB) and a Member of the Nigerian Institute of Management (MNIM)
+                                He has attended several top management programs both locally and internationally including – Lagos Business School, Nigeria, INSEAD, France and Euro money both in UK and Singapore.
+
+                            </p>
+                            <p>
+                                Mr. Joda has over (25) twenty-five years’ experience in Bank and Non- Bank Financial Institutions spread over (5) five institutions with core competences in corporate finance, corporate banking, branch banking, retail banking and key customer management.
+                            </p>
+                            <p>
+                                Institutions he worked prior to joining Accion MFB include: Arbitrage Finance and Investment Company LTD, Kenneth Michael & company Nig. LTD, FSB International, International Trust Bank, Equatorial Trust Bank, Diamond Bank and Fidelity Bank plc.
+                            </p>
+                            <p>
+                                His remarkable performance on the job earned him appointments into critical and strategic committees and several awards in the institutions he had previously worked.
+
+                                He has excellent leadership skills and continually mentors young professionals.
+
+                                Mr. Joda was appointed the MD/CEO of Accion Microfinance Bank on August 1st 2017 but assumed full responsibility as Managing Director/Chief Executive Officer on January 2nd 2018.
+                            </p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="ccoModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 th:text="#{team.cco.name}" class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                Nwanna Joel-Ezeugo is the Chief Commercial Officer of the bank.  She has worked in various financial institutions in her 25 year work experience. She has attended various training programs locally and internationally including the prestigious Harvard Business School program on Microfinance, Accion International’s OTP program as well as Lagos Business School’ Strategic Leadership and Total Quality Management programs. 
+                            </p>
+                            <p>
+                                She is a graduate of Accountancy and has an MBA in Banking & Finance from ESUT Business School. She is a Fellow of the Institute of Chartered Accountants of Nigeria, a Member of the Nigeria Institute of Management (Chartered); Associate Member, Chartered Institute of Taxation  and Chartered Institute of Pensions of Nigeria.
+                            </p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="cioModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 th:text="#{team.cio.name}" class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                Benedict Anyalenkeya  joins Accion Microfinance Bank as the Chief Information Officer. With  over 25 years’ experience in consulting, manufacturing and banking with core competencies in technology strategy, electronic banking, channels and product management, retail banking, accounting and project management.
+                            </p>
+                            <p>
+                                He is a Microsoft Certified Professional, Certified Information Systems Auditor, Certified in Risk and Control of IT, Fellow of the Institute of Chartered Accountants of Nigeria, Associate Chartered Certified Accountant of London, Lead Auditor certified in British Standard number 7799 on Information Security and Certified International Cards & Payments Professional.
+                            </p>
+                            <p>
+                                He has worked as Group Head of electronic Business where he built electronic channels leading to exceptional growth on all indices in two years.
+                                Benedict is an Accounting graduate from Yaba College of Technology.  In his academic and professional pursuit, he won the following prizes;ICAN National Prize Winner 1998, ACCA highest scorer in Information Analysis in 1999, CISA highest scorer in Nigeria in 2000.
+                            </p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="cooModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 th:text="#{team.coo.name}" class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                Tunde Omolere has over 15 years’ experience in commercial, retail, mortgage and microfinance banking. Prior to joining Accion Microfinance Bank, Tunde worked with Wema Bank Plc, Global Trust Savings & Loans Ltd and Intercontinental Bank Plc where he was an award winner. He also served as Managing Director of Crowned Eagle Microfinance Bank. Tunde is an alumnus of ESUT Business School with a Master’s Degree in Business Administration (MBA).
+                            </p>
+                            <p>
+                                He is a Fellow of Institute of Chartered Accountant of Nigeria (ICAN) and Microfinance Certified Banker of Chartered Institute of Bankers. He has attended several local and international courses in Internal Control and Risk Management, which include Boulder Institute of Microfinance Bank, Italy and Harvard Business School, USA.
+                            </p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="coaModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 th:text="#{team.coa.name}" class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                Stephen Olalere joined Accion Microfinance Bank in 2011 as Head Internal Audit before moving into the position of Chief Operations Officer and now Chief Compliance Officer & Audit . He has over 15 years’ experience in the financial services industry having previously worked with Eagle Bank and Oceanic Bank Plc, as well as a stint with Fina Trust Microfinance Bank. Stephen holds a Higher National Diploma in Accounting and an MBA in Finance.
+                            </p>
+                            <p>
+                                An Associate of the Institute of Chartered Accountants of Nigeria, and a Microfinance Certifies professional, he has attended several courses both locally and internationally including a programme at the prestigious Harvard Business School.
+                            </p>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="riskModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 th:text="#{team.risk.name}" class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                Waheed joined Accion Microfinance Bank in January 2015. He has over 15 years valuable work experience having worked with Akintola Williams with specialization in Enterprise Risk Services. He also worked with UBA Plc before progressing to an infrastructure company. Prior to joining Accion Microfinance Bank, he worked as Head, Internal Audit at Lekki Concession Company Ltd. 
+                            </p>
+                            <p>
+                                Waheed hold s a BSc in Banking & Finance. He is an Associate of the Institute of Chartered Accountants of Nigeria and a member of the Institute of Internal Auditors.
+                            </p>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="hrModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 th:text="#{team.hr.name}" class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                Christy Adeyemo holds a Master’s degree in Managerial Psychology from the University of Ibadan in 2007. She is a graduate of Yaba College of Technology, Lagos where she obtained her Higher National Diploma in Accountancy in 1998.
+                                She is a certified Human Resources Professional by the Chartered Institute of Personnel Management of Nigeria where she is an Associate member. (ACIPM).  
+                            </p>
+                            <p>
+                                She is also an Associate Member of the Chartered Institute of Accountants of Nigeria (ACA). She is a passionate Human Resources Practitioner and a versatile Auditor with over 16 years’ experience with high profile organizations.
+                                She has developed effective teams, built sustainable strategies, structures, policies and procedures that were able to add value to operational efficiency with organizations served.
+                                <br/>
+                                She is currently the Head of Human Resources of the Bank
+                            </p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="hbsModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 th:text="#{team.hbm.name}" class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                Emeka Uzowulu joined Accion Microfinance Bank as Commercial Manager in 2008. Since then he has risen to his current position as Head, Business Banking, Up Country (SS & SE).  He has over 25 years’ experience in financial services delivery in both corporate and retail banking spending 15 years in the Microfinance industry, of which 9 years were in executive management.
+                            </p>
+                            <p>
+                                Emeka holds a Bachelor's Degree in Business Administration and an MBA in Financial Management. He has attended several courses both local and international including ILO/Accion Ghana and the famous Harvard Business School on Strategic Leadership for Microfinance. He is member of the Nigeria Institute of Management.
+                            </p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="ractModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 th:text="#{team.ract.name}" class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                Oladapo Famuyide is a seasoned e-business specialist with over 10 years extensive experience in payment channels delivery. He also has experience in operations gained over the years while working with NBM Bank (a member of the Fortis Group) which later merged with five other banks during the banking consolidation of 2005 to form Sterling Bank Plc. Before joining Accion in August 2015, Dapo was the Head of Digital Channels & Payments for Sterling Bank Plc. 
+                            </p>
+                            <p>
+                                Dapo holds a Master’s Degree in Business Administration with specialization in e-business from the University of Wales in Cardiff. He is also a certified e-business consultant of the EC-Council in the US and has also attended independent courses on developing innovative ideas for new companies as well as surviving disruptive technologies at the University of Maryland in the United States.
+                            </p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="mcModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 th:text="#{team.mc.name}" class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                Mr. Robert Magala holds a Bachelors of Commerce in Marketing from Makerere University Kampala, Uganda and a Diploma in Marketing of Services from Maastricht School of Management, Netherlands. A Microfinance specialist with over fourteen (14)years’ experience in the microfinance and financial inclusion sector in East and West Africa, he worked with Microsave Inclusive Finance Consultants, as a Senior Analyst.
+                            </p>
+                            <p>
+                                Prior to joining Microsave, Robert worked in Nigeria with VSO International as a Business development, Microfinance Advisor for the VSO Nigeria program, where he helped to strengthen micro credit programmes of a couple of NGOs in Benue.
+                                Most of his work experience has been at FINCA Uganda, where he spent over 10 years. He was a member of the management team that spearheaded FINCA’s transformation from a NGO to the first Microfinance Deposit taking institution in Uganda.
+                            </p>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

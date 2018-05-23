@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Accion Loans</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/products/brighta-loans}">Loans</a></li>
+                            <li class="breadcrumb-item active">Loan Request</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <section class="bar">
+                    <div class="row portfolio-project">
+                        <div class="col-sm-3">
+                            <!-- MENUS AND WIDGETS -->
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div class="panel-heading">
+                                    <h3 class="h4 panel-title">Brighta Loans</h3>
+                                </div>
+                                <div th:insert="~{brightaLoans :: loanSideMenu}"></div>
+                            </div>
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div class="panel-heading">
+                                    <h3 class="h4 panel-title">Brighta Accounts</h3>
+                                </div>
+                                <div th:insert="~{brightaProducts :: productSideMenu}"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <section class="bar background-white no-mb">
+                                <div class="container">
+                                    <div class="card border-light mb-3">
+                                        <div class="card-header text-center text-primary text-bold">Request For Loan</div>
+                                        <div class="card-body text-secondary">
+                                            <form id="loanRequestForm" th:action="@{/products/request-brighta-loan}" th:object="${brightaLoan}" method="POST">
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Surname</div>
+                                                    <div class="col-sm-6"><input type="text" class="form-control form-control-sm" th:field="*{surname}" placeholder="Surname"/></div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('surname')}" class="help-block" th:errors="*{surname}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Other Names</div>
+                                                    <div class="col-sm-6"><input type="text" class="form-control form-control-sm" th:field="*{otherNames}" placeholder="First name and middle name"/></div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('otherNames')}" class="help-block" th:errors="*{otherNames}"></span></div>
+                                                </div>
+                                                <br/>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3"></div>
+                                                    <div class="col-sm-6"><button type="submit" class="btn btn-secondary">Submit</button></div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

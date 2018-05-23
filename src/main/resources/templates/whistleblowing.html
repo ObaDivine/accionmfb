@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-4">
+                        <h1 class="h5">Whistle Blowing</h1>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active"><a th:href="@{/contact/contact-us}">Contact Us</a></li>
+                            <li class="breadcrumb-item active">Whistle Blowing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <!-- MENUS AND WIDGETS -->
+                        <div class="panel panel-default sidebar-menu with-icons">
+                            <div class="panel-body">
+                                <div th:insert="~{contactUs :: contactUsSideMenu}"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <section id="whistle-blowing">
+                            <div class="card border-light" style="width: 53rem;">
+                                <img class="card-img-top" th:src="@{/img/about/whistle.png}" alt="Card image cap" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Whistle Blowing</h5>
+                                    <blockquote class="blockquote mb-0">
+                                        <p>
+                                            Accion MfB as the leading microfinance bank  is committed to upholding innovative customer services and top notch ethical value in the work place, consequently all Employees, Directors, Vendors and other Stakeholders are required to comport themselves with the utmost honesty and integrity in their dealings with the Bank and its stakeholders.
+
+                                            The Bank’s Whistle-Blowing Policy aims at strengthening its corporate governance and risk management architecture whilst enhancing value for all stakeholders.
+
+                                            Therefore, all stakeholders are encouraged to report their concerns about any unethical behaviour to the Bank for investigation and appropriate attention.
+
+                                            The Bank recognizes the need for protection of whistle-blowers and takes all reasonable steps to protect their identity. The Bank also appreciates the importance of utmost confidentiality in these situations and has developed various anonymous channels for reporting unethical behaviour.
+
+                                            For this purpose, any report of unethical behavior may be communicated through any of the following designated media:
+
+                                        </p>
+                                        <footer class="blockquote-footer">Management <cite title="Source Title">Accion MfB Limited</cite></footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function enlargePicture(imageName){
+                $('#selectedPicture').attr("src", imageName);
+                $('#pictureModal').modal('show');
+            }
+        </script>
+    </head>
+    <body>
+        <div class="modal fade" id="pictureModal">
+            <div class="modal-dialog modal-dialog-centered" role = "document">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <img id="selectedPicture" src="" style="width:470px;height:350px;"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Events</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active">News and Events</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="10anniversary" class="bar background-white no-mb">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="heading text-center">
+                        <h5>Accion 10th Year Anniversary</h5>
+                    </div>
+                    <p>Accion MfB 10th year anniversary being sponsored by Accion International</p>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/1.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/1.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/2.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/2.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/3.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/3.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/4.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/4.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/5.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/5.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/6.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/6.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/7.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/7.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/8.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/8.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/9.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/9.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/10.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/10.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/11.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/11.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/10_anniversary/12.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/10_anniversary/12.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="financialInclusion" class="bar bg-light no-mb">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="heading text-center">
+                        <h5>Financial Inclusion Seminary</h5>
+                    </div>
+                    <p>This seminar was held at the Eko hotels and suites</p>
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/financial_inclusion/1.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/1.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/financial_inclusion/2.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/2.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/financial_inclusion/3.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/3.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/financial_inclusion/4.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/4.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/financial_inclusion/5.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/5.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/financial_inclusion/6.jpg}" alt="..." class="img-fluid">
+                                    <div class="overl                      ay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/6.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/financial_inclusion/7.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/7.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/financial_inclusion/8.jpg}" al                t="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/8.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src            ="@{/img/events/financial_inclusion/9.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/9.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/financial_inclusion/10.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/10.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/financial_inclusion/11.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/11.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="event-gallery">
+                                <div class="image"><img th:src="@{/img/events/financial_inclusion/12.jpg}" alt="..." class="img-fluid">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white" th:onclick="|enlargePicture('/img/events/financial_inclusion/12.jpg')|"> Enlarge View</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

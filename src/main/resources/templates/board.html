@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Directors</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/about/about-accion}">About Accion</a></li>
+                            <li class="breadcrumb-item active">Board of Directors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <section class="bar mb-0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading text-center">
+                                <h2>Accion Board of Directors</h2>
+                            </div>
+                            <p th:text="#{board.director.heading}" class="lead"></p>
+                            <div class="row text-center">
+                                <div class="col-md-3  wow slideInRight">
+                                    <div class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/chairman_board.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                        <h3><a th:text="#{board.member.1.name}" th:href="@{/board-of-directors/1}" data-toggle="modal" data-target="#chairmanModal"></a></h3>
+                                        <p class="role">Chairman</p>
+                                    </div>
+                                </div>
+                                <!-- /.team-member-->
+                                <div class="col-md-3  wow slideInRight" data-wow-delay="0.2s">
+                                    <div class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/vice_chairman_board.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                        <h3><a th:text="#{board.member.3.name}" th:href="@{/board-of-directors/3}" data-toggle="modal" data-target="#vicechairmanModal"></a></h3>
+                                        <p class="role">Vice Chairman</p>
+                                    </div>
+                                </div>
+                                <!-- /.team-member-->
+                                <div class="col-md-3  wow slideInRight" data-wow-delay="0.4s">
+                                    <div class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/md.jpg}" alt="" class="img-fluid rounded-circle" style="width:100px; height:115px;"></div>
+                                        <h3><a th:text="#{board.member.2.name}" th:href="@{/board-of-directors/2}" data-toggle="modal" data-target="#mdModal"></a></h3>
+                                        <p class="role">MD/CEO</p>
+                                    </div>
+                                </div>
+                                <!-- /.team-member-->
+                                <div class="col-md-3 wow slideInRight" data-wow-delay="0.6s">
+                                    <div class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/board_member_1.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                        <h3><a th:text="#{board.member.4.name}" th:href="@{/board-of-directors/4}" data-toggle="modal" data-target="#member1Modal"></a></h3>
+                                        <p class="role">Member</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row text-center">
+                                <div class="col-md-3 wow slideInRight">
+                                    <div class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/board_member_2.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                        <h3><a th:text="#{board.member.5.name}" th:href="@{/board-of-directors/5}" data-toggle="modal" data-target="#member2Modal"></a></h3>
+                                        <p class="role">Member</p>
+                                    </div>
+                                </div>
+                                <!-- /.team-member-->
+                                <div class="col-md-3 wow slideInRight" data-wow-delay="0.2s">
+                                    <div class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/board_member_3.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                        <h3><a th:text="#{board.member.6.name}" th:href="@{/board-of-directors/6}" data-toggle="modal" data-target="#member3Modal"></a></h3>
+                                        <p class="role">Member</p>
+                                    </div>
+                                </div>
+                                <!-- /.team-member-->
+                                <div class="col-md-3 wow slideInRight" data-wow-delay="0.4s">
+                                    <div class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/board_member_4.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                        <h3><a th:text="#{board.member.7.name}" th:href="@{/board-of-directors/7}" data-toggle="modal" data-target="#member4Modal"></a></h3>
+                                        <p class="role">Member</p>
+                                    </div>
+                                </div>
+                                <!-- /.team-member-->
+                                <div class="col-md-3 wow slideInRight" data-wow-delay="0.6s">
+                                    <div class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/board_member_5.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                        <h3><a th:text="#{board.member.8.name}" th:href="@{/board-of-directors/8}" data-toggle="modal" data-target="#member5Modal"></a></h3>
+                                        <p class="role">Member</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row text-center">
+                                <div class="col-md-3 wow slideInRight">
+                                    <div data-animate="fadeInUp" class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/board_member_6.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                        <h3><a th:text="#{board.member.9.name}" th:href="@{/board-of-directors/9}" data-toggle="modal" data-target="#member6Modal"></a></h3>
+                                        <p class="role">Member</p>
+                                    </div>
+                                </div>
+                                <!-- /.team-member-->
+                                <div class="col-md-3 wow slideInRight" data-wow-delay="0.2s">
+                                    <div class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/board_member_9.jpg}" alt="" class="img-fluid rounded-circle" style="width:89px; height:115px;"></div>
+                                        <h3><a th:text="#{board.member.10.name}" th:href="@{/board-of-directors/10}" data-toggle="modal" data-target="#member9Modal"></a></h3>
+                                        <p class="role">Member</p>
+                                    </div>
+                                </div>
+                                <!-- /.team-member-->
+                                <div class="col-md-3 wow slideInRight" data-wow-delay="0.4s">
+                                    <div class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/board_member_7.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                        <h3><a th:text="#{board.member.11.name}" th:href="@{/board-of-directors/11}" data-toggle="modal" data-target="#member10Modal"></a></h3>
+                                        <p class="role">ALternate Member</p>
+                                    </div>
+                                </div>
+                                <!-- /.team-member-->
+                                <div class="col-md-3 wow slideInRight" data-wow-delay="0.6s">
+                                    <div class="team-member">
+                                        <div class="image"><img th:src="@{/img/management/board_member_8.jpg}" alt="" class="img-fluid rounded-circle"></div>
+                                        <h3><a th:text="#{board.member.12.name}" th:href="@{/board-of-directors/12}" data-toggle="modal" data-target="#member11Modal"></a></h3>
+                                        <p class="role">Alternate Member</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="modal fade" id="chairmanModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 th:text="#{board.member.1.name}" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            Patrick Akinwuntan is Executive Director, Ecobank Transnational incorporation. He has acquired over 20 years in the financial services industry. He has an MBA in Finance from Obafemi Awolowo University and is an alumnus of the prestigious Harvard Business School (SEP).
+                        </p>
+                        <p>
+                            He is also a Fellow of the Institute of Chartered Accountants of Nigeria (1988) and an Associate Member of the Chartered Institute of Taxation of Nigeria.
+                            Patrick Akinwuntan represents Ecobank on the Board of Accion Microfinance Bank.                            </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="vicechairmanModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 th:text="#{board.member.3.name}" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            John Fischer is a Vice President with Accion International. His career with Accion spans over 9 years with previous assignments as Director, Investment and Credit Analyst at Rhinesmith and Associates Inc. He has held various board positions in organizations like Apoyo Integral, S.A, as Director, Audit Committee Member, Akiba Commercial Bank Tanzania, as Director, Audit Committee Member, Risk Committee Member and Banco Popular Covelo, Honduran as Director and Alternate Director, Corporate Governance Committee Member.
+                        </p>
+                        <p>
+                            John is a graduate of Boston University Graduate School of Management and holds an MBA and MIR.
+                            John Fischer represents Accion Investments in Microfinance Nigeria on the Board of Accion Microfinance Bank.                           </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="mdModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 th:text="#{board.member.2.name}" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            Mr. Taiwo Adesina Joda is the Managing Director/CEO of Accion Microfinance Bank. He holds a B.Sc. degree in Finance and Banking from the University of Lagos and a Masters degree in Finance and Banking from the same university. He is an Alumnus of Said Business School – Oxford University
+                        </p>
+                        <p>
+                            Mr. Joda is a senior member of the Chartered Institute of Bankers (HCIB) and a Member of the Nigerian Institute of Management (MNIM)
+                            He has attended several top management programs both locally and internationally including – Lagos Business School, Nigeria, INSEAD, France and Euro money both in UK and Singapore.
+
+                        </p>
+                        <p>
+                            Mr. Joda has over (25) twenty-five years’ experience in Bank and Non- Bank Financial Institutions spread over (5) five institutions with core competences in corporate finance, corporate banking, branch banking, retail banking and key customer management.
+                        </p>
+                        <p>
+                            Institutions he worked prior to joining Accion MFB include: Arbitrage Finance and Investment Company LTD, Kenneth Michael & company Nig. LTD, FSB International, International Trust Bank, Equatorial Trust Bank, Diamond Bank and Fidelity Bank plc.
+                        </p>
+                        <p>
+                            His remarkable performance on the job earned him appointments into critical and strategic committees and several awards in the institutions he had previously worked.
+
+                            He has excellent leadership skills and continually mentors young professionals.
+
+                            Mr. Joda was appointed the MD/CEO of Accion Microfinance Bank on August 1st 2017 but assumed full responsibility as Managing Director/Chief Executive Officer on January 2nd 2018.
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="member1Modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 th:text="#{board.member.4.name}" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            Segun Aina is a recipient of the National Honour of the Order of the Federal Republic (OFR) among other awards. He started his banking career in 1974 with United Bank for Africa, and rose to be the Managing Director of the then Fountain Trust Bank Plc, now a part of Heritage Bank.
+                        </p>
+                        <p>
+                            He is the immediate past President/Chairman in Council of the Chartered Institute of Bankers of Nigeria. He currently sits on the Board of many organizations and also engages in community related activities like the United Nations Development Programme-Human Development Fund (Osun State) among others, where he sat as Chairman Board of Trustees.                           
+                        </p>
+                        <p>
+                            His educational background started at the University of Lagos where he obtained a B.Sc., then unto the University of Ibadan for an MSc. He is a Fellow of Chartered Institute of Bankers of London and Nigeria& has attended prominent business schools like Lagos Business School, INSEAD France, and IMD Switzerland.
+                            Dr Segun Aina is an Independent Director.
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="member2Modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 th:text="#{board.member.5.name}" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            Habiba Balogun is lead consultant at HBC with a specialization in Organization Effectiveness. She holds a Bachelor's Degree in French and Italian from the University of London and a Master's degree in Organizational Management from George Washington University, Washington DC. 
+                        </p>
+                        <p>
+                            She is a certified Leadership Coach, Trainer and Neuro Linguistic Programming Practitioner. In her twenty-six year career, she has worked with clients in the US, UK, Netherlands, Cameroon, Gabon, Ghana, Senegal, South Africa, South Korea, Kenya and Nigeria including the Niger-Delta and has held various roles working in industries which include Banking, Manufacturing, Import-Export, Marketing, Media, Education and Oil & Gas.
+                            <br/>
+                            Mrs Habiba Balogun is an Independent Director.                          
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="member3Modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 th:text="#{board.member.6.name}" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            Mr. Akin Dawodu became the Citi Country Officer (CCO) for Citi Nigeria Limited in April 2015. Prior to being the CCO, he was the Chief Operating Officer (COO) and Public Sector Head for Citi Nigeria. Mr. Dawodu joined Citi in June 2000 as a Foreign Exchange Dealer. He became Chief Dealer in 2003 before leaving the bank in 2005 and subsequently becoming the first Treasurer of MTN Nigeria. 
+                        </p>
+                        <p>
+                            He returned to Citi in July 2007 and subsequently became Fixed Income Currency and Commodities Head and Country Treasurer in October 2007. Akin became the Chief Operating Officer and Public Sector Head for Citi Nigeria Limited in January 2013. He has played a decisive role in general franchise management and developing our interface between Citi and the Nigerian Public Sector.                             
+                        </p>
+                        <p>
+                            He attended Kings’ College Lagos and the University of Lagos. He also holds an MBA from Manchester Business School (MBS) and became a holder of the Chartered Financial Analyst (CFA) designation awarded by the CFA Institute in 2003. He is also the immediate past president of the Financial Market Dealers’ Association. 
+                            <br/>
+                            Akinsowon Dawodu represents Citibank on the Board of Accion Microfinance Bank.
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="member4Modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 th:text="#{board.member.7.name}" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            Mrs Adenike Laoye is a graduate of the Lagos State University, Ms. Laoye was called to the Bar in 1991, after which she joined the chambers of Fani-Kayode (SAN) & Sowemimo (SAN). She joined Ecobank Nigeria in 1992 and presently is the Company Secretary / Chief Legal Counsel responsible for (amongst other things); the management of the entire legal risk function in the Bank and ensuring compliance with all governance requirements.
+                        </p>
+                        <p>
+                            With 25 years’ post call in-house counsel experience, she is very knowledgeable in documentation for transactions and processes and possesses excellent negotiation skills. An honorary member of the Chartered Institute of Bankers of Nigeria, she is married with children.
+                            Adenike Laoye represents Ecobank on the Board of Accion Microfinance Bank.                        
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="member5Modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 th:text="#{board.member.8.name}" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            Mr. Olumide Obayomi, an Independent Director and Consultant, has been in private consulting for over 5 years.  Formerly a Consultant Fund Manager for Small, Medium Enterprises Fund with African Alliance Company (CAN Fund Manager Limited), he still sits on the Executive Committee of one of ACA managed funds’ portfolio company as an independent member.
+                        </p>
+                        <p>
+                            Mr Obayomi has more than 25 years of banking and other financial services experience, that includes 17 years’ experience in private equity/venture capital investing and management with a premier private equity management company in Africa, operating principally from Nigeria. With private equity and entrepreneurship enabling experiences that have been anchored on robust experience in corporate strategy and planning, accounting, financial reporting and control, information systems design and management, taxation and general management both in the public and private sectors, Mr Olumide brings to Accion Microfinance Bank a wealth of knowledge in the management of different types of businesses.
+                            <br/>
+                            Mr Obayomi is an Independent Director.                            
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="member6Modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 th:text="#{board.member.9.name}" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            Mr. Christian Ruehmer is an expert in the area of Risk Management and Treasury for financial institutions in developing countries  and a Senior Risk Manager and Banker with over 25 years of international experience.
+                        </p>
+                        <p>
+                            He comes to Accion Microfinance Bank with In-depth international experience for over 15 years in the implementation and improvements of risk management frameworks with over 70 financial institutions and international organizations across the world. With a focus on the integration of technology and data management to improve risk management and competitiveness of financial institutions, Christian is an experienced Risk and Compliance manager.
+                            <br/>
+                            Christian Ruehmer represents Accion Investments in Microfinance Nigeria on the Board of Accion Microfinance Bank.                           
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="member9Modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 th:text="#{board.member.10.name}" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            Prateek Shrivastava is Vice President, Digital Solutions, at Accion. He is responsible for supporting Accion’s portfolio companies – MFIs, banks and Fintech companies, worldwide to use digital services to become more efficient and enhance customer service in a cost effective and sustainable manner. During the past 23 years, the theme of Prateek’s career has been to use technology as the vehicle for making people’s lives easier and to understand the reasons that make businesses and projects successful in different cultural contexts.
+                        </p>
+                        <p>
+                            He has successfully deployed projects in over 25 countries on 5 continents of different sizes – ranging from enterprise-wide SAP and groupware deployments, mobile phone based field information systems to mobile banking and payment systems. He was Managing Director for Emerging Markets between 2009 and 2012 at Monitise plc, where during this time, his project in Nigeria was one of the subjects of a visit to Nigeria by the Rt. Hon. David Cameron, Prime Minister of the UK.
+                            <br/>
+                            Prateek Shrivastava represents Accion Investments in Microfinance Nigeria on the Board of Accion Microfinance Bank.                          
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="member10Modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 th:text="#{board.member.11.name}" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            Nneka Enwereji is an Executive Director at Citibank Nigeria where she leads the coverage of Citi’s multinational and top tier local corporate clients. As business head, she is responsible for all business functions, including strategy, risk management, staffing, compliance and financials. Nneka has played a pivotal role in several landmark financing transactions and strategic client solutions. Prior to this role, she was responsible for Citi’s Africa Trade Services business, across 35 presence and non-presence countries. Nneka has International Trade experience across various markets and has led the structuring, execution and distribution of major multilateral trade deals.
+                        </p>
+                        <p>
+                            Nneka has held several senior positions in her 24-year banking career. She is a veteran banker with banking experience spanning Treasury, Corporate & Investment Banking, Risk Management, Operations and Transaction Services. She is also an Alternate Director at Accion Microfinance Bank Nigeria.
+                            <br/>
+                            Nneka holds a B.Sc. degree in Computer Science and Economics cum laude and an MBA from the Warwick Business School U.K. She is also an alumnus of UCLA’s Women’s Leadership Development program. Nneka is married with children.
+                            <br/>
+                            Nneka Enwereji is an Alternate Director to Mr Akinsowon Dawodu.                          
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="member11Modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">David Kruijff</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            David Kruijff is an independent consultant to International Finance Corporation (IFC). A Dutch national, with educational background from Wageningen Agricultural University, where he obtained an MSc.in rural development studies- Rural Finance and University of Wales, were he also obtained an MSc. in international relations- postcolonial politics..
+                        </p>
+                        <p>
+                            He has been involved in numerous trainings in the area of banking,equity, credit and management training, and has work experience in Albania, Argentina, Bosnia, Bolivia,Herzegovina, Cameroon, Kenya, Morocco and Nigeria just to mention a few..
+                            <br/>
+                            He has worked in a number of companies among which are IFC (World Bank Group) Washington DC, as a micro finance specialist &investment officer/micro finance lead Latin America.He also has alot of Board experience, as he worked in similar capacities on the Board of other organizations.
+                            <br/>
+                            Mr Kruijff represents IFC on the Board.                         
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

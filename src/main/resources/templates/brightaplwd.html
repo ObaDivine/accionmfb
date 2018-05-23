@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-5">
+                        <h1 class="h5">People Living With Disability</h1>
+                    </div>
+                    <div class="col-md-7">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/products/brighta-loans}">Loans</a></li>
+                            <li class="breadcrumb-item active">People Living With Disability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <section class="bar">
+                    <div class="row portfolio-project">
+                        <div class="col-sm-3">
+                            <!-- MENUS AND WIDGETS -->
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div th:insert="~{brightaLoans :: loanSideMenu}"></div>
+                            </div>
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div class="panel-heading">
+                                    <h3 class="h4 panel-title">Brighta Accounts</h3>
+                                </div>
+                                <div th:insert="~{brightaProducts :: productSideMenu}"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="project-more">
+                                <div th:insert="~{brightaLoans :: loanCarousel}"></div>
+                                <h4>People Living With Disability</h4>
+                                <p>This loan serves as working capital loan for a target cliental base i.e economically active individuals living with a disability.</p>
+                                <div class="card-deck">
+                                    <div class="card border-primary">
+                                        <div class="card-header text-center">Features</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">No administrative fees</li>
+                                                <li class="list-group-item">Access to loan for as low as N12,500.00</li>
+                                                <li class="list-group-item">No Collateral</li>
+                                                <li class="list-group-item">Interest Rate At 9%</li>
+                                                <li class="list-group-item">Insured loan of 1%.</li>
+                                                <li class="list-group-item">Commitment fee of 1%</li>
+                                                <li class="list-group-item">Tenure 6Months - 1Year</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-primary">
+                                        <div class="card-header text-center">Benefits</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Quick turnaround time</li>
+                                                <li class="list-group-item">Easy loan procedure</li>
+                                                <li class="list-group-item">Very Low interest rate</li>
+                                                <li class="list-group-item">Flexible tenure</li>
+                                                <li class="list-group-item">Opportunity to grow business with Accion MfB</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-primary">
+                                        <div class="card-header text-center">Requirements</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Proforma invoice of asset of choice</li>
+                                                <li class="list-group-item">A/C opening required </li>
+                                                <li class="list-group-item">Prove of business ownership and experience</li>
+                                                <li class="list-group-item">Guarantor </li>
+                                                <li class="list-group-item">Proof of viable business</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a th:href="@{/career/career-path}" class="btn btn-default">Open Account</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

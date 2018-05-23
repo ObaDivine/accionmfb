@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-4">
+                        <h1 class="h5">ATM Locations</h1>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active"><a th:href="@{/contact/contact-us}">Contact Us</a></li>
+                            <li class="breadcrumb-item active">ATM Locations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- MENUS AND WIDGETS -->
+                        <div class="panel panel-default sidebar-menu with-icons">
+                            <div class="panel-body">
+                                <div th:insert="~{contactUs :: contactUsSideMenu}"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="card wow fadeInUp" style="width: 16rem;">
+                                        <div class="card-header branch-network-header">
+                                            Abeokuta
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Diekola House, <br/>Sapon, <br/>Abeokuta.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card wow fadeInUp" style="width: 16rem;">
+                                        <div class="card-header branch-network-header">
+                                            Alagbole
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">89, Ojodu Akute Road, <br/>Okute, <br/>Alagbole, Lagos</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card wow fadeInUp" style="width: 16rem;">
+                                        <div class="card-header branch-network-header">
+                                            Ajegunle
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">62 Bale Street, <br/>Boundary, <br/>Ajeugunle, Lagos</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card wow fadeInUp" style="width: 16rem;">
+                                        <div class="card-header branch-network-header">
+                                            Baruwa
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">154, Ipaja Road , <br/>Baruwa, <br/>Lagos.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="card wow fadeInUp"  data-wow-delay="0.4s" style="width: 16rem;">
+                                        <div class="card-header branch-network-header">
+                                            Ajah Branch
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">22 Adekunle Fajuyi Road (Beside MKO Abiola House), <br/>Dugbe,<br/>Ibadan.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card wow fadeInUp"  data-wow-delay="0.4s" style="width: 16rem;">
+                                        <div class="card-header branch-network-header">
+                                            Lagos Island
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">16, Apongbon, <br/>Lagos Island, <br/>Lagos.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card wow fadeInUp"  data-wow-delay="0.4s" style="width: 16rem;">
+                                        <div class="card-header branch-network-header">
+                                            Otta
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">46, Ijoko Road, <br/>Sango Otta, <br/> Ogun.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card wow fadeInUp"  data-wow-delay="0.4s" style="width: 16rem;">
+                                        <div class="card-header branch-network-header">
+                                            Onyingbo
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">152, Herbert Macaulay Street, , <br/>Onyingbo, <br/>Lagos.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

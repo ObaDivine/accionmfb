@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">My Loan</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/products/brighta-loans}">Loans</a></li>
+                            <li class="breadcrumb-item active">My Loan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <section class="bar">
+                    <div class="row portfolio-project">
+                        <div class="col-sm-3">
+                            <!-- MENUS AND WIDGETS -->
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div th:insert="~{brightaLoans :: loanSideMenu}"></div>
+                            </div>
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div class="panel-heading">
+                                    <h3 class="h4 panel-title">Brighta Accounts</h3>
+                                </div>
+                                <div th:insert="~{brightaProducts :: productSideMenu}"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="project-more">
+                                <div th:insert="~{brightaLoans :: loanCarousel}"></div>
+                                <h4>My Loan</h4>
+                                <p>A loan product designed strictly for pensioners who are in need of working capital loans to assist them in post retirement businesses.</p>
+                                <div class="card-deck">
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Features</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Access to loan from N50,000.00 and above</li>
+                                                <li class="list-group-item">Up to 24 months repayment plan</li>
+                                                <li class="list-group-item">5% interest per month reducing balance</li>
+                                                <li class="list-group-item">1% commitment fee & 1% Admin fee</li>
+                                                <li class="list-group-item">1% interest on insurance</li>
+                                                <li class="list-group-item">Equity contribution not applicable</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Benefits</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Easy Loan procedure</li>
+                                                <li class="list-group-item">Affordable and convenient loans</li>
+                                                <li class="list-group-item">Competitive interest rate</li>
+                                                <li class="list-group-item">Opportunity to grow your business after retirement</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Requirements</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Must be retired and on monthly pension</li>
+                                                <li class="list-group-item">Client must be earning at least N16,000.00 monthly</li>
+                                                <li class="list-group-item">Meet all documentation and information – related requirements to Accion MfB</li>
+                                                <li class="list-group-item">Client to authorize PFA to make monthly annuity into client’s account with Accion</li>
+                                                <li class="list-group-item">Repayment of loan debited from client’s monthly annuity payments</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a th:href="@{/career/career-path}" class="btn btn-default">Open Account</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

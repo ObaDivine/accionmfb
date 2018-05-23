@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">About Accion</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active">About Accion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <!-- MENUS AND WIDGETS -->
+                        <div class="panel panel-default sidebar-menu with-icons">
+                            <div class="panel-heading">
+                                <h3 class="h4 panel-title">About Accion</h3>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="nav nav-pills flex-column text-sm">
+                                    <li class="nav-item"><a th:href="@{/about/about-accion}" class="nav-link active">Accion Values</a></li>
+                                    <li class="nav-item"><a th:href="@{/about/board-of-directors}" class="nav-link">Board of Directors</a></li>
+                                    <li class="nav-item"><a th:href="@{/about/management-team}" class="nav-link">Management Team</a></li>
+                                    <li class="nav-item"><a th:href="@{/about/accion-partners}" class="nav-link">Accion Partners</a></li>
+                                    <li class="nav-item"><a th:href="@{/about/accion-financials}" class="nav-link">Our Financial</a></li>
+                                    <li class="nav-item"><a th:href="@{/about/privacy-policy}" class="nav-link">Privacy Policy</a></li>
+                                    <li class="nav-item"><a th:href="@{/about/terms-of-use}" class="nav-link">Terms of Use</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div id="accordion" role="tablist" class="mb-5">
+                            <div class="card">
+                                <div id="headingOne" role="tab" class="card-header">
+                                    <h5 class="mb-0"><a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Accion Microfinance Bank</a></h5>
+                                </div>
+                                <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" class="collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-3"><img th:src="@{/img/about/logo.png}" alt="" class="img-fluid" ></div>
+                                            <div class="col-md-9">
+                                                <p>
+                                                    Established in 2006, Accion Microfinance Bank Limited began operations in May 2007 on license from the Central Bank of Nigeria.
+                                                </p>
+                                                <p>
+                                                    Our management team comprises seasoned and distinguished professionals from diverse backgrounds complemented by the expertise of our technical partners, ACCION International.
+                                                </p>
+                                                <p>
+                                                    At Accion Microfinance Bank our core values, business philosophy and methodology distinguish us as one of the leading microfinance banks in Nigeria.
+                                                </p>                                              
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h4>Mission</h4>
+                                                <p>
+                                                    To economically empower micro-entrepreneurs and low income earners by providing financial services in a sustainable, ethical and profitable manner.
+                                                </p>
+                                                <h4>Vision</h4>
+                                                <p>
+                                                    To be the market leader in the provision of microfinance and related financial services, at world class standards.
+                                                </p>
+                                                <h4>Values</h4>
+                                                <p>
+                                                <h5>Integrity</h5>
+                                                We adhere to the highest ethical standard; employing fairness, probity and mutual respect in all we do.<br/>
+                                                <h5>Customer Service</h5>
+                                                We actively seek to understand our customers’ circumstances, problems, expectations and needs with the aim of delighting and surpassing their expectations in our service delivery.<br/>
+                                                <h5>Leadership</h5>
+                                                We are committed to an attitude and culture of positively influencing the environment around us both as an organization and individually through our people.<br/>
+                                                <h5>Innovation</h5>
+                                                Ours is a creative team determined to generate new products, services and processes that lead to new dimensions of performance and value creation for all our stakeholders.<br/>
+                                                <h5>Teamwork</h5>
+                                                We collaborate with all our stakeholders by effectively interacting and proactively building effective and value adding relationships to achieve our shared goals.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div id="headingTwo" role="tab" class="card-header">
+                                    <h5 class="mb-0"><a data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">Chairman's Statement</a></h5>
+                                </div>
+                                <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-3"><img th:src="@{/img/management/chairman_board.jpg}" alt="" class="img-fluid rounded-circle" style="width:100px; height:115px;"></div>
+                                            <div class="col-md-9">
+                                                <p>
+                                                <h5>Chairman's Address at the 10th Annual General Meeting of Accion Microfinance Bank Ltd. on 10th June 2016</h5>
+                                                On behalf of the Board of Directors, it is my pleasure to welcome you to the 10th Annual General Meeting of Accion Microfinance Bank Limited and present to you the annual report and financial statements for the year ended 2015. The Bank’s performance continues to be positive in line with our vision of being the market leader in ensuring that Nigerians are financially included, while providing our customers with easy access to funds to grow their business.
+                                                </p>                                               
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h5>Economic Overview</h5>
+                                                <p>
+                                                    A year of contrasts, 2015 started on a challenging note for the Nigerian economy and was characterized by several highs and lows. An election year which eventually culminated in a change of guard combined with declining crude oil prices in the global market.   The government needed time to settle in leading to delayed reaction to managing the economy hits by declining oil prices.  With crude oil accounting for over 80% of Nigeria’s revenue, the decline in the price of a barrel of crude oil severely affected the income revenue of the Federal Government leading to a combination of spending cuts and raising additional revenue from non-oil activities.
+                                                    Boko Haram’s continued terrorist activities in the North Eastern part of the country was significantly curtailed by the later part of the year, but it still had a negative impact on socio economic activities in this area.  By the end of 2015 the economy was experiencing a slow-down.
+                                                    Micro entrepreneurs were not left out of the challenges witnessed in the environment as inflation rose, cost of electricity, transportation and other essential commodities.
+                                                </p>
+                                                <h5>Our Achievements</h5>
+                                                <p>
+                                                    In spite of this atmosphere, Accion Microfinance Bank’s key performance indicators remained positive as our active borrowers grew by 27.9%, from 34,245in 2014 to 43,788 in December 2015. Our accounts base increased by 47.8% from 150,321 in 2014 to 222, 158 accounts in December 2015, while number of savers grew by 38.2% from 86,665 in 2014 to 119, 758 in December 2015.  The bank made a profit after tax of N545.9M at the end of 2015 representing a drop of -12.3% compared to 2014. However, shareholders’ funds grew to N3bn in 2015 from N2.6bn in 2014 representing a growth of 16.9%. Compared to December 2014, our total loan portfolio grew by 28.1% from N4.2bn in December 2014 to N5.4bn in December 2015. Total loans disbursed grew by 33.3% from 10.3bn in 2014 to N13.7bn in 2014, with total loans disbursed from inception to date closing at N46.56bn at the end of December 2015.
+                                                    It also gives me great joy to announce to you that our bank received an award from the Ikeja City Awards for the ‘Most Consistent Microfinance Bank of 2015’.
+                                                </p>
+                                                <h5>Extending our Boundaries</h5>
+                                                <p>
+                                                    In 2015, our branches increased by 8 branches as we started banking operations at Agric Ikorodu, Aguda, Oke-Odo, Baruwa, Festac, Isolo, Boundary and  Mile 1 in Port Harcourt, Rivers State. In 2016, we continued our strategy of expanding our operations to other states as well as increasing our presence in Lagos State. In this vein, I am pleased to inform you that that we now have operational branches in Ogun, Oyo, Anambra States in addition to Rivers State. This is a significant step for us as we continue to actualize our mission to economically empower micro entrepreneurs and ensure that Nigerians have easy access to financial services and benefit in the brighter future that is the hallmark of Accion Microfinance Bank Limited.                                               
+                                                </p>
+                                                <h5>Future  Outlook</h5>
+                                                <p>
+                                                    2016 is a significant year for Accion Microfinance Bank as we continue with our strategic plan to expand geographically in Nigeria with a variety of retail channels whilst improving on our operational efficiency through technology driven operations and self-service resulting in more convenience, easy access for our clients and smaller space requirements for lower costs.
+                                                    Innovation and the use of technology which has helped us operate at more efficient levels will be leveraged on in 2016 to enable us continue to serve our customers more efficiently. The first sets of Accion MfB ATMs were commissioned in 2015 and we envision that by the end of 2016, we should have over 50 ATM machines functioning in every state that we have a presence in.
+                                                    To further enhance operational efficiency, save time and cost and guaranty easy access to our customers, we intend to commence with our digital field application project in 2016 which should improve our loan process and operational efficiency, amongst other benefits.
+                                                    I must express my appreciation to the entire staff, management and my colleagues on the Board for their commitment, and selfless service, which has enabled us to deliver these results. To our esteemed customers, we remain grateful for your loyalty.
+                                                    Together we will create a brighter and better future. <br/>
+                                                </p>
+                                                <p>Thank you</p>
+                                                <p>Patrick Akinwuntan</p>
+                                                <p>Chairman</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

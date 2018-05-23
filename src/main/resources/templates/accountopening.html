@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Accion Accounts</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/products/brighta-accounts}">Products</a></li>
+                            <li class="breadcrumb-item active">Open Account</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <section class="bar">
+                    <div class="row portfolio-project">
+                        <div class="col-sm-3">
+                            <!-- MENUS AND WIDGETS -->
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div class="panel-heading">
+                                    <h3 class="h4 panel-title">Brighta Accounts</h3>
+                                </div>
+                                <div th:insert="~{brightaProducts :: productSideMenu}"></div>
+                            </div>
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div class="panel-heading">
+                                    <h3 class="h4 panel-title">Brighta Loans</h3>
+                                </div>
+                                <div th:insert="~{brightaLoans :: loanSideMenu}"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <section class="bar background-white no-mb">
+                                <div class="container">
+                                    <div class="card border-light mb-3 bg-light">
+                                        <div class="card-header text-center text-primary text-bold">Open Brighta Account</div>
+                                        <div class="card-body text-secondary">
+                                            <form id="accountOpeningForm" th:action="@{/products/create-brighta-account}" th:object="${brightaAccount}" method="POST">
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Surname</div>
+                                                    <div class="col-sm-6"><input type="text" class="form-control form-control-sm" th:field="*{surname}" placeholder="Surname"/></div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('surname')}" class="help-block" th:errors="*{surname}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">First Name</div>
+                                                    <div class="col-sm-6"><input type="text" class="form-control form-control-sm" th:field="*{firstName}" placeholder="First name"/></div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('firstName')}" class="help-block" th:errors="*{firstName}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Middle Name</div>
+                                                    <div class="col-sm-6"><input type="text" class="form-control form-control-sm" th:field="*{middleName}" placeholder="Middle name"/></div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('middleName')}" class="help-block" th:errors="*{middleName}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Date of Birth</div>
+                                                    <div class="col-sm-6"><input type="date" class="form-control form-control-sm" th:field="*{doB}" placeholder="Date of birth"/></div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('doB')}" class="help-block" th:errors="*{doB}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Gender</div>
+                                                    <div class="col-sm-6">
+                                                        <select th:field="*{gender}"  class="form-control form-control-sm">
+                                                            <option value="">--Select--</option>
+                                                            <option th:each="sex : ${genders}" 
+                                                                    th:value="${sex}" 
+                                                                    th:text="${sex}">
+                                                            </option>
+                                                        </select> 
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('gender')}" class="help-block" th:errors="*{gender}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">Phone Number</div>
+                                                    <div class="col-sm-6"><input type="text" class="form-control form-control-sm" th:field="*{phoneNumber}" placeholder="Phone Number"/></div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('phoneNumber')}" class="help-block" th:errors="*{phoneNumber}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">State of Origin</div>
+                                                    <div class="col-sm-6">
+                                                        <select th:field="*{stateOfOrigin}"  class="form-control form-control-sm">
+                                                            <option value="">--Select--</option>
+                                                            <option th:each="state : ${states}" 
+                                                                    th:value="${state}" 
+                                                                    th:text="${state}">
+                                                            </option>
+                                                        </select> 
+                                                    </div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('stateOfOrigin')}" class="help-block" th:errors="*{stateOfOrigin}"></span></div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3 form-control-sm">City</div>
+                                                    <div class="col-sm-6"><input type="text" class="form-control form-control-sm" th:field="*{town}" placeholder="Town"/></div>
+                                                    <div class="col-sm-3 form-control-sm"><span th:if="${#fields.hasErrors('town')}" class="help-block" th:errors="*{town}"></span></div>
+                                                </div>
+                                                <br/>
+                                                <div class="form-row">
+                                                    <div class="col-sm-3"></div>
+                                                    <div class="col-sm-6"><button type="submit" class="btn btn-secondary">Submit</button></div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

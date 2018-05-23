@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">Brighta Investor</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/products/brighta-accounts}">Products</a></li>
+                            <li class="breadcrumb-item active">Brighta Investor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <section class="bar">
+                    <div class="row portfolio-project">
+                        <div class="col-sm-3">
+                            <!-- MENUS AND WIDGETS -->
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div th:insert="~{brightaProducts :: productSideMenu}"></div>
+                            </div>
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div class="panel-heading">
+                                    <h3 class="h4 panel-title">Brighta Loans</h3>
+                                </div>
+                                <div th:insert="~{brightaLoans :: loanSideMenu}"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="project-more">
+                                <div th:insert="~{brightaProducts :: productCarousel}"></div>
+                                <h4>Accion Brighta Investor</h4>
+                                <p>This create opportunity for customers to invest their fund with AccionMfB for a higher return</p>
+                                <div class="card-deck">
+                                    <div class="card border-primary">
+                                        <div class="card-header text-center">Features</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Minimum investment deposit of N100,000.00</li>
+                                                <li class="list-group-item">Minimum deposit tenure 30days</li>
+                                                <li class="list-group-item">Access funds via branch</li>
+                                                <li class="list-group-item">A day notice required to withdraw funds</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-primary">
+                                        <div class="card-header text-center">Benefits</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Interest is negotiable and calculated on average monthly balance</li>
+                                                <li class="list-group-item">COT Free</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-primary">
+                                        <div class="card-header text-center">Requirements</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Complete account opening form and specimen signature card</li>
+                                                <li class="list-group-item">2 passport photographs</li>
+                                                <li class="list-group-item">Identification such as<br/>
+                                                    -International Passport<br/>
+                                                    -Drivers License<br/>
+                                                    -National ID card</li>
+                                                <li class="list-group-item">Utility Bill</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a th:href="@{/products/open-brighta-account}" class="btn btn-default">Open Account</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

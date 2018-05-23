@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-4">
+                        <h1 class="h5">Frequently Asked Questions</h1>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active"><a th:href="@{/contact/contact-us}">Contact Us</a></li>
+                            <li class="breadcrumb-item active">Frequently Asked Questions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <!-- MENUS AND WIDGETS -->
+                        <div class="panel panel-default sidebar-menu with-icons">
+                            <div class="panel-body">
+                                <div th:insert="~{contactUs :: contactUsSideMenu}"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="card green-header wow slideInRight">
+                            <div class="card-header">Questions Regarding Accion Loans</div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a data-toggle="collapse" href="#howManyAccounts">Question: What are the requirements to get a loan?</a>
+                                    <div class="collapse" id="howManyAccounts">
+                                        <div class="card card-body">
+                                            <ul>
+                                            <li>You must have been business for more than 1 year and been at your shop for more than 6 months.</li>
+                                            <li>2 passport photograph.</li>
+                                            <li>Mode of Identity (Driver’s license, Permanent voters Card or International Passport) BVN.</li>
+                                            <li>Utility bill not less than 6 months</li>
+                                            <li>A Guarantor (a business person or salary earner).</li>
+                                            <li>Collateral for SME loans.</li>
+                                            <li>Account statement and cheques for loans above 400,000.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"><a data-toggle="collapse" href="#howManyAccounts">Question: How many days does it take to process a loan application?</a>
+                                    <div class="collapse" id="howManyAccounts">
+                                        <div class="card card-body">
+                                            The loan application takes 3 working days after you have submitted necessary requirements.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"><a data-toggle="collapse" href="#howManyAccounts">Can I have multiple Accion accounts?</a>
+                                    <div class="collapse" id="howManyAccounts">
+                                        <div class="card card-body">
+                                            Yes. There is no limit to the number of Accion accounts an individual can have.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card  wow slideInLeft" style="background-colo:#ea7600;">
+                            <div class="card-header">Questions Regarding Accion Loans</div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a data-toggle="collapse" href="#howManyAccounts">Can I have multiple Accion accounts?</a>
+                                    <div class="collapse" id="howManyAccounts">
+                                        <div class="card card-body">
+                                            Yes. There is no limit to the number of Accion accounts an individual can have.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"><a data-toggle="collapse" href="#howMany">Can I have multiple Accion accounts?</a>
+                                    <div class="collapse" id="howMany">
+                                        <div class="card card-body">
+                                            Yes. There is no limit to the number of Accion accounts an individual can have.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"><a data-toggle="collapse" href="#howManyAs">Can I have multiple Accion accounts?</a>
+                                    <div class="collapse" id="howManyAs">
+                                        <div class="card card-body">
+                                            Yes. There is no limit to the number of Accion accounts an individual can have.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card green-header  wow slideInRight">
+                            <div class="card-header">Questions Regarding Accion Services</div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a data-toggle="collapse" href="#howManyLoans">Can I have multiple Accion accounts?</a>
+                                    <div class="collapse" id="howManyLoans">
+                                        <div class="card card-body">
+                                            Yes. There is no limit to the number of Accion accounts an individual can have.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"><a data-toggle="collapse" href="#howManyL">Can I have multiple Accion accounts?</a>
+                                    <div class="collapse" id="howManyL">
+                                        <div class="card card-body">
+                                            Yes. There is no limit to the number of Accion accounts an individual can have.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"><a data-toggle="collapse" href="#howManyLL">Can I have multiple Accion accounts?</a>
+                                    <div class="collapse" id="howManyLL">
+                                        <div class="card card-body">
+                                            Yes. There is no limit to the number of Accion accounts an individual can have.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

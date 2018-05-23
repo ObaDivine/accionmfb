@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{app.title}">Accion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div th:insert="~{header :: accionMFBHeader}"></div>
+        <div id="heading-breadcrumbs">
+            <div class="container">
+                <div class="row d-flex align-items-center flex-wrap">
+                    <div class="col-md-7">
+                        <h1 class="h5">My School Extra</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb d-flex justify-content-end">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/products/brighta-loans}">Loans</a></li>
+                            <li class="breadcrumb-item active">My School Extra</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <section class="bar">
+                    <div class="row portfolio-project">
+                        <div class="col-sm-3">
+                            <!-- MENUS AND WIDGETS -->
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div th:insert="~{brightaLoans :: loanSideMenu}"></div>
+                            </div>
+                            <div class="panel panel-default sidebar-menu with-icons">
+                                <div class="panel-heading">
+                                    <h3 class="h4 panel-title">Brighta Account</h3>
+                                </div>
+                                <div th:insert="~{brightaProducts :: productSideMenu}"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="project-more">
+                                <div th:insert="~{brightaLoans :: loanCarousel}"></div>
+                                <h4>My School Extra</h4>
+                                <p>This will also serve as both working capital and asset loan for schools.</p>
+                                <div class="card-deck">
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Features</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Access to loan of up to N2,000,000.00</li>
+                                                <li class="list-group-item">Loans strictly disbursed to schools</li>
+                                                <li class="list-group-item">Interest rate of 5% per month</li>
+                                                <li class="list-group-item">Insurance on loan at 1%</li>
+                                                <li class="list-group-item">Tenure of up to 2 years</li>
+                                                <li class="list-group-item">Admin fee of 1%</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Benefits</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Working capital and asset loan for schools</li>
+                                                <li class="list-group-item">Quarterly repayment plan</li>
+                                                <li class="list-group-item">Competitive interest rate.(5% reducing balance month)</li>
+                                                <li class="list-group-item">Easy loan procedure</li>
+                                                <li class="list-group-item">Opportunity to grow business with Accion MfB</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card border-secondary">
+                                        <div class="card-header text-center">Requirements</div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Account opening and proper documentation required</li>
+                                                <li class="list-group-item">Proof of school ownership/existence</li>
+                                                <li class="list-group-item">Proof of business viability</li>
+                                                <li class="list-group-item">Proof of school existence for at least 1year</li>
+                                                <li class="list-group-item">School must be willing to have business account with Accion MfB</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a th:href="@{/career/career-path}" class="btn btn-default">Open Account</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div th:insert="~{footer :: accionMFBFooter}"></div>
+    </body>
+</html>

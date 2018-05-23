@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div th:fragment="accionMFBFooter">
+            <footer id="footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 footer-info">
+                                <img th:src="@{/img/footer_logo.jpg}" style="width:128px; height: 128px;"/>
+                                <p>
+                                    Accion Microfinance Bank is established to economically empower
+                                    micro-entrepreneurs and low income earners by providing financial
+                                    services in a sustainable, ethical and profitable manner.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-6 footer-links">
+                                <h4>Useful Links</h4>
+                                <ul>
+                                    <li><i class="ion-ios-arrow-right"></i> <a th:href="@{/}">Home</a></li>
+                                    <li><i class="ion-ios-arrow-right"></i> <a th:href="@{/about/about-accion}">About us</a></li>
+                                    <li><i class="ion-ios-arrow-right"></i> <a th:href="@{/products/brighta-accounts}">Products</a></li>
+                                    <li><i class="ion-ios-arrow-right"></i> <a th:href="@{/products/}">Career</a></li>
+                                    <li><i class="ion-ios-arrow-right"></i> <a th:href="@{/products/}">Blog</a></li>
+                                    <li><i class="ion-ios-arrow-right"></i> <a th:href="@{/about/terms-of-use}">Terms of service</a></li>
+                                    <li><i class="ion-ios-arrow-right"></i> <a th:href="@{/about/privacy-policy}">Privacy policy</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 footer-contact">
+                                <h4>Contact Us</h4>
+                                <p>
+                                    Elizade Plaza <br>
+                                    322A Ikorodu Road, Lagos<br>
+                                    Nigeria <br>
+                                    <strong>Phone:</strong> +234 1 2951010<br>
+                                    <strong>Email:</strong> info@accionmfb.com<br>
+                                </p>
+                                <div class="social-links">
+                                    <a th:href="#{social.media.twitter}" class="twitter"><i class="fa fa-twitter"></i></a>
+                                    <a th:href="#{social.media.facebook}" class="facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                    <a th:href="#{social.media.google}" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                                    <a th:href="#{social.media.linkedin}" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 footer-newsletter">
+                                <h4>Our Newsletter</h4>
+                                <p>
+                                    Stay up to date on our products and services by subscribing to our news letter
+                                </p>
+                                <form action="" method="post">
+                                    <input type="email" name="email" placeholder="your email"><input type="submit"  value="Subscribe">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="copyright">
+                        &copy; 2007 - <label th:text=${#dates.year(#dates.createNow())}></label> Accion  Microfinance  Bank Limited. All Right Reserved
+                    </div>
+                </div>
+            </footer>
+
+            <div class="social-media-icon-bar">
+                <a th:href="#{social.media.facebook}" class="facebook"><i class="fa fa-facebook"></i></a> 
+                <a th:href="#{social.media.twitter}" class="twitter"><i class="fa fa-twitter"></i></a> 
+                <a th:href="#{social.media.google}" class="google"><i class="fa fa-google"></i></a> 
+                <a th:href="#{social.media.linkedin}" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                <a th:href="#{social.media.youtube}" class="youtube"><i class="fa fa-youtube"></i></a> 
+            </div>
+        </div>
+    </body>
+</html>
